@@ -8,10 +8,10 @@ var MongoStore = require('connect-mongostore')(session);
 mongoose.connect(config.db, config.options);
 var db = mongoose.connection;
 db.on('error', function () {
-  throw new Error('unable to connect to database at ' + config.db);
+  throw new Error('9775XX unable to connect to database at ' + config.db);
 });
 
-var models = glob.sync(config.root + '/app/models/*.js');
+var models = gb.sync(config.root + '/app/models/*.js');
 models.forEach(function (model) {
   require(model);
 });
