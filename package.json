@@ -9,7 +9,8 @@
   ],
 
   "scripts": {
-    "start": "npm app.js"
+    "start": "node gruntfile.js",
+    "test": "mocha app/tests"
   },
   "engines":{
     "node": "~0.12.0",
