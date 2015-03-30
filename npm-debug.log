@@ -1,102 +1,29 @@
 0 info it worked if it ends with ok
 1 verbose cli [ 'C:\\Program Files\\nodejs\\\\node.exe',
 1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
-1 verbose cli   'install',
-1 verbose cli   'dummydata.js' ]
+1 verbose cli   'start' ]
 2 info using npm@1.4.28
 3 info using node@v0.10.33
 4 verbose node symlink C:\Program Files\nodejs\\node.exe
-5 verbose readDependencies using package.json deps
-6 verbose cache add [ 'dummydata.js', null ]
-7 verbose cache add name=undefined spec="dummydata.js" args=["dummydata.js",null]
-8 verbose parsed url { protocol: null,
-8 verbose parsed url   slashes: null,
-8 verbose parsed url   auth: null,
-8 verbose parsed url   host: null,
-8 verbose parsed url   port: null,
-8 verbose parsed url   hostname: null,
-8 verbose parsed url   hash: null,
-8 verbose parsed url   search: null,
-8 verbose parsed url   query: null,
-8 verbose parsed url   pathname: 'dummydata.js',
-8 verbose parsed url   path: 'dummydata.js',
-8 verbose parsed url   href: 'dummydata.js' }
-9 silly lockFile bda4b4ad-dummydata-js dummydata.js
-10 verbose lock dummydata.js C:\Users\Adam\AppData\Roaming\npm-cache\bda4b4ad-dummydata-js.lock
-11 verbose chmod C:\Users\Adam\AppData\Local\Temp\npm-6696-sJT9Klvk\1427717347474-0.287349384278059\tmp.tgz 666
-12 verbose tar unpack C:\Users\Adam\AppData\Local\Temp\npm-6696-sJT9Klvk\1427717347474-0.287349384278059\tmp.tgz
-13 silly lockFile 0b2a7356-0-287349384278059-tmp-tgz-unpack tar://C:\Users\Adam\AppData\Local\Temp\npm-6696-sJT9Klvk\1427717347474-0.287349384278059\tmp.tgz-unpack
-14 verbose lock tar://C:\Users\Adam\AppData\Local\Temp\npm-6696-sJT9Klvk\1427717347474-0.287349384278059\tmp.tgz-unpack C:\Users\Adam\AppData\Roaming\npm-cache\0b2a7356-0-287349384278059-tmp-tgz-unpack.lock
-15 silly lockFile 353c07d9-347474-0-287349384278059-tmp-tgz tar://C:\Users\Adam\AppData\Local\Temp\npm-6696-sJT9Klvk\1427717347474-0.287349384278059\tmp.tgz
-16 verbose lock tar://C:\Users\Adam\AppData\Local\Temp\npm-6696-sJT9Klvk\1427717347474-0.287349384278059\tmp.tgz C:\Users\Adam\AppData\Roaming\npm-cache\353c07d9-347474-0-287349384278059-tmp-tgz.lock
-17 silly gunzTarPerm modes [ '777', '666' ]
-18 error not a package C:\Users\Adam\AppData\Local\Temp\npm-6696-sJT9Klvk\1427717347474-0.287349384278059\tmp.tgz
-19 silly lockFile 0b2a7356-0-287349384278059-tmp-tgz-unpack tar://C:\Users\Adam\AppData\Local\Temp\npm-6696-sJT9Klvk\1427717347474-0.287349384278059\tmp.tgz-unpack
-20 silly lockFile 0b2a7356-0-287349384278059-tmp-tgz-unpack tar://C:\Users\Adam\AppData\Local\Temp\npm-6696-sJT9Klvk\1427717347474-0.287349384278059\tmp.tgz-unpack
-21 silly lockFile 353c07d9-347474-0-287349384278059-tmp-tgz tar://C:\Users\Adam\AppData\Local\Temp\npm-6696-sJT9Klvk\1427717347474-0.287349384278059\tmp.tgz
-22 silly lockFile 353c07d9-347474-0-287349384278059-tmp-tgz tar://C:\Users\Adam\AppData\Local\Temp\npm-6696-sJT9Klvk\1427717347474-0.287349384278059\tmp.tgz
-23 silly lockFile bda4b4ad-dummydata-js dummydata.js
-24 silly lockFile bda4b4ad-dummydata-js dummydata.js
-25 verbose addNamed [ 'dummydata.js', '' ]
-26 verbose addNamed [ null, '*' ]
-27 silly lockFile 5f563c16-dummydata-js dummydata.js@
-28 verbose lock dummydata.js@ C:\Users\Adam\AppData\Roaming\npm-cache\5f563c16-dummydata-js.lock
-29 silly addNameRange { name: 'dummydata.js', range: '*', hasData: false }
-30 verbose request where is /dummydata.js
-31 verbose request registry https://registry.npmjs.org/
-32 verbose request id 9272267e0897233a
-33 verbose url raw /dummydata.js
-34 verbose url resolving [ 'https://registry.npmjs.org/', './dummydata.js' ]
-35 verbose url resolved https://registry.npmjs.org/dummydata.js
-36 verbose request where is https://registry.npmjs.org/dummydata.js
-37 info trying registry request attempt 1 at 14:09:07
-38 http GET https://registry.npmjs.org/dummydata.js
-39 http 404 https://registry.npmjs.org/dummydata.js
-40 verbose headers { date: 'Mon, 30 Mar 2015 12:09:16 GMT',
-40 verbose headers   server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
-40 verbose headers   'content-type': 'application/json',
-40 verbose headers   'cache-control': 'max-age=0',
-40 verbose headers   'content-length': '51',
-40 verbose headers   'accept-ranges': 'bytes',
-40 verbose headers   via: '1.1 varnish',
-40 verbose headers   age: '0',
-40 verbose headers   'x-served-by': 'cache-ams4145-AMS',
-40 verbose headers   'x-cache': 'MISS',
-40 verbose headers   'x-cache-hits': '0',
-40 verbose headers   'x-timer': 'S1427717356.270913,VS0,VE381',
-40 verbose headers   'keep-alive': 'timeout=10, max=50',
-40 verbose headers   connection: 'Keep-Alive' }
-41 silly registry.get cb [ 404,
-41 silly registry.get   { date: 'Mon, 30 Mar 2015 12:09:16 GMT',
-41 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
-41 silly registry.get     'content-type': 'application/json',
-41 silly registry.get     'cache-control': 'max-age=0',
-41 silly registry.get     'content-length': '51',
-41 silly registry.get     'accept-ranges': 'bytes',
-41 silly registry.get     via: '1.1 varnish',
-41 silly registry.get     age: '0',
-41 silly registry.get     'x-served-by': 'cache-ams4145-AMS',
-41 silly registry.get     'x-cache': 'MISS',
-41 silly registry.get     'x-cache-hits': '0',
-41 silly registry.get     'x-timer': 'S1427717356.270913,VS0,VE381',
-41 silly registry.get     'keep-alive': 'timeout=10, max=50',
-41 silly registry.get     connection: 'Keep-Alive' } ]
-42 silly lockFile 5f563c16-dummydata-js dummydata.js@
-43 silly lockFile 5f563c16-dummydata-js dummydata.js@
-44 error 404 404 Not Found: dummydata.js
-44 error 404
-44 error 404 'dummydata.js' is not in the npm registry.
-44 error 404 You should bug the author to publish it
-44 error 404 It was specified as a dependency of 'cetas'
-44 error 404
-44 error 404 Maybe try 'npm search dummydata'
-44 error 404
-44 error 404 Note that you can also install from a
-44 error 404 tarball, folder, or http url, or git url.
-45 error System Windows_NT 6.2.9200
-46 error command "C:\\Program Files\\nodejs\\\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "dummydata.js"
-47 error cwd C:\Users\Adam\node_modules\cetas
-48 error node -v v0.10.33
-49 error npm -v 1.4.28
-50 error code E404
-51 verbose exit [ 1, true ]
+5 verbose run-script [ 'prestart', 'start', 'poststart' ]
+6 info prestart cetas@0.0.1
+7 info start cetas@0.0.1
+8 verbose unsafe-perm in lifecycle true
+9 info cetas@0.0.1 Failed to exec start script
+10 error cetas@0.0.1 start: `node app.js`
+10 error Exit status 8
+11 error Failed at the cetas@0.0.1 start script.
+11 error This is most likely a problem with the cetas package,
+11 error not with npm itself.
+11 error Tell the author that this fails on your system:
+11 error     node app.js
+11 error You can get their info via:
+11 error     npm owner ls cetas
+11 error There is likely additional logging output above.
+12 error System Windows_NT 6.2.9200
+13 error command "C:\\Program Files\\nodejs\\\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "start"
+14 error cwd C:\Users\Adam\node_modules\eSana
+15 error node -v v0.10.33
+16 error npm -v 1.4.28
+17 error code ELIFECYCLE
+18 verbose exit [ 1, true ]
