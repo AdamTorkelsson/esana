@@ -1,0 +1,29 @@
+extends ../layout
+
+block content
+ div.container
+  div.col-sm-6.col-sm-offset-3 
+   h2  
+     span.fa.fa-sign-in  #{language.surgeryInfo.surgeryinfo} - "Patient's id/personal number" 
+
+ 
+   h3
+   form(action='/api/patients/#{p_id}/surgeries', method="post")
+          input(type="hidden", name="id", value=p_id)
+
+          div.form-group
+             label #{language.surgeryInfo.surgery}
+             input.form-control(type="text", name="surgery", value=user.surgery) 
+
+          div.form-group
+             label #{language.surgeryInfo.department}
+             input.form-control(type="text", name="department", value=user.department) 
+
+          div.form-group
+             label #{language.surgeryInfo.hospital}
+             input.form-control(type="text", name="hospital", value=user.hospital) 
+
+          div.form-group
+             label #{language.surgeryInfo.notes}
+             textarea.form-control(name="comments", rows="5", cols="50")
+          button.btn.btn-warning.btn-lg(style="float: right;  margin-left:2%", type="submit") #{language.myprofile.save}

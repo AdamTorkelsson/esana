@@ -1,0 +1,14 @@
+extends ../layout
+
+block content
+  h3= user.local.email
+  p=  user.id
+
+  a.btn.btn-default.btn-sm(href="/logout") Logga ut
+  
+  if (user.role == 1)
+    p
+      |  Du är doktor
+  else
+    p
+      |  Du är patient

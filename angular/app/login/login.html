@@ -1,0 +1,18 @@
+
+<div id="log">
+  <div class="col-sm-6 col-sm-offset-3">
+    <h3 class="text-center"><img ng-src="/img/Logo_White.png" width="100"/></h3>
+    <div ng-if="message" ng-bind="message" class="alert alert-danger"></div>
+    <form name="login" class="text-center">
+      <div class="form-group">
+        <label class="headertext">{{language.loginPage.username}}</label>
+        <input type="email" ng-model="user.email" required="required" style="width:40%" class="form-control"/>
+      </div>
+      <div class="form-group">
+        <label class="headertext">{{language.loginPage.password}}</label>
+        <input type="password" ng-model="user.password" required="required" style="width:40%" class="form-control"/>
+      </div>
+      <button ng-click="submit(login)" style="margin-left:auto; margin-right:auto" class="buttonsubmit">{{language.loginPage.login}}</button>
+    </form>
+  </div>
+</div>

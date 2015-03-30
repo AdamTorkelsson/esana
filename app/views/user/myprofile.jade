@@ -1,0 +1,44 @@
+extends ../layout
+
+block content
+ div.container
+  div.col-sm-6.col-sm-offset-3 
+   h3
+     span.fa.fa-sign-in  #{language.index.myprofile} 
+
+ 
+   form(action='#', method="post")
+   
+          input(type="hidden", name="id", value=user.id)
+          
+          div.form-group
+            label #{language.myprofile.email}
+            input.form-control(type="text", name="email", value=user.local.email) 
+          div.form-group           
+            label #{language.myprofile.firstname}
+            input.form-control(type="text", name="firstname", value=user.firstname)
+          div.form-group   
+            label #{language.myprofile.lastname}
+            input.form-control(type="text", name="lastname" , value=user.lastname) 
+          div.form-group          
+            label #{language.myprofile.address1}
+            input.form-control(type="text", name="address1", value=user.address1)  
+           div.form-group 
+            label #{language.myprofile.address2}
+            input.form-control(type="text", name="address2", value=user.address2) 
+          div.form-group           
+            label #{language.myprofile.postalnumber}
+            input.form-control(type="text", name="postalno", value=user.postalno) 
+          div.form-group           
+            label #{language.myprofile.city}
+            input.form-control(type="text", name="city", value=user.city)          
+          div.form-group           
+            label #{language.myprofile.mobile}
+            input.form-control(type="text", name="mobile", value=user.mobile)   
+
+          button.btn.btn-warning.btn-lg(style="float: right;  margin-left:2%", type="submit") 
+            | #{language.myprofile.save}
+      // button.btn.btn-warning.btn-lg(style="float: right; margin-left:2%", type="button" onclick="location.href = '/password';" ) 
+        | #{language.myprofile.changePassword}
+      // button.btn.btn-warning.btn-lg(style="float: right", type="redirect" onclick="location.href = '/';" ) #{language.myprofile.back}
+

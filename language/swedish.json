@@ -1,0 +1,143 @@
+{
+	"index": {
+		"login": "Logga in",
+		"myprofile": "Redigera min profil",
+		"form": "Fyll i ett formulär",
+		"register": "Registrera ny patient",
+		"mypatients": "Patienter",
+		"password": "Ändra lösenord",
+		"logout": "Logga ut",
+		"loggedInAs": "Inloggad som",
+		"andIs": "och är",
+		"welcomeTitle": "Välkommen!"
+	},
+	
+	"form": {
+		"pleaseAnswer": "Har du haft något följande de sista 24 timmarna?",
+		"questionPain": "Medelsvår smärta",
+			"noPain": "Inte alls",
+			"worstPain": "Hela tiden",
+		"questionPainkillers": "Har du tagit smärtstillande senaste timmarna?",
+			"yes": "Ja",
+			"no": "Nej",
+		"questionNausea": "Svår Smärta",
+			"noNausea": "Inte alls",
+			"severeNausea": "Hela tiden",
+		"questionNarcosis": "Illamående eller kräkning?",
+			"notAffected": "Inte alls",
+			"veryAffected": "Hela tiden",
+		"questionDaily": "Känsla av oro eller ångest?",
+			"notAtAll": "Inte alls",
+			"completely": "Hela tiden",
+		"questionRoutine": "Har du återgått till arbete eller annan vardagsrutin?",
+		"questionSatisfied": "Hur nöjd är du med återhämtningen?",
+			"dissatisfied": "Mycket missnöjd",
+			"satisfied": "Mycket nöjd",
+		"questionWorst": "Markera det besvär som är värst?",
+		"worst": {
+			"pain": "Smärta",
+			"nausea": "Illamående",
+			"immobility": "Orörlighet",
+			"insomnia": "Sömnbesvär",
+			"fever": "Feber",
+			"noSymptoms": "Inget besvär"
+		},
+		"questionAssess": "Bedöm appens användarvänlighet",
+			"hardToUse": "Mycket svåranvänd",
+			"easyToUse": "Lätt att använda",
+		"comments": "Anteckningar",
+		"submit": "Skicka"
+	},
+	
+	"loginPage": {
+		"login": "Logga in",
+		"username": "Email",
+		"password": "Lösenord"
+	},
+	
+	"myprofile": {
+		"editProfile": "Redigera profil",
+		"email": "Email",
+		"firstname": "Förnamn",
+		"lastname": "Efternamn",
+		"address1": "Adressfält 1",
+		"address2": "Adressfält 2",
+		"postalnumber": "Postnummer",
+		"city": "Postort",
+		"mobile": "Mobilnummer",
+		"save": "Spara",
+		"changePassword": "Ändra lösenord",
+		"back": "Tillbaka"
+	},
+	
+	"patient": {
+		"addPatient" : "Lägg till patient",
+		"patientdata": "Patientdata",
+		"email": "Email",
+		"name": "Namn",
+		"address1": "Adressfält 1",
+		"address2": "Adressfält 2",
+		"postalnumber": "Postnummer",
+		"city": "Postort",
+		"phone": "Telefonnummer",
+		"personalnumber": "Personnummer",
+		"back": "Tillbaka"
+	},
+	
+	"password": {
+		"changePassword": "Ändra lösenord",
+		"password": "Lösenord",
+		"confirmPassword": "Bekräfta lösenord",
+		"save": "Spara",
+		"back": "Tillbaka"
+	},
+
+	"surgeryInfo": {
+		"surgeryinfo" : "Lägg till operation",
+		"surgery" : "Operation",
+		"department" : "Avdelning",
+		"hospital" : "Sjukhus",
+		"notes" : "Anteckningar",
+		"operations": "Operationer"
+	},
+
+	"doctor" : {
+		"editpatient" : "Redigera profil",
+		"surgery" : "Lägg till operation",
+		"form" : "Fyll i formulär",
+		"home" : "Hem"
+	},
+	
+	"patientListing" : {
+		"name": "Namn",
+		"personalnumber": "Personnummer",
+		"completedforms": "# ifyllda formulär",
+		"latestform": "Senast ifyllda formulär"
+	},
+
+	"signup" : {
+		"firstname" : "Förnamn",
+		"lastname" : "Efternamn",
+		"occupation" : "Ockupation",
+		"email" :	"Email",
+		"password" : "Lösenord",
+		"skapakonto" : "Skapa Konto",
+		"personal_number" : "Personnummer",
+		"notes" : "Anteckningar"
+	},
+	
+	"formrecord" : {
+		"formdata": "Formulärdata",
+		"date": "Datum",
+		"pain": "Smärta",
+		"assess": "Utvärdering",
+		"worstThing": "Värsta problem",
+		"satisfied": "Återhämtning",
+		"routine": "Vardagsrutin",
+		"dailyActivities": "Vardagsaktivitet",
+		"narcosis": "Påverkan av narkos",
+		"nausea": "Illamående",
+		"painKillers": "Smärtstillande",
+		"comments": "Anteckningar"
+	}
+ }

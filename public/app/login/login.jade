@@ -1,0 +1,13 @@
+div#log
+  div.col-sm-6.col-sm-offset-3
+    h3.text-center
+      img(ng-src='/img/Logo_White.png', width="100")
+    .alert.alert-danger(ng-if="message" ng-bind="message")
+    form(name="login").text-center
+      div.form-group
+        label.headertext {{language.loginPage.username}}
+        input.form-control(type="email" ng-model="user.email" required style="width:40%")
+      div.form-group
+        label.headertext {{language.loginPage.password}}
+        input.form-control(type="password" ng-model="user.password" required style="width:40%")
+      button.buttonsubmit(ng-click="submit(login)" style="margin-left:auto; margin-right:auto") {{language.loginPage.login}}

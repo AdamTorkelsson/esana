@@ -1,0 +1,21 @@
+
+<h3 class="text-center"> <span>{{language.surgeryInfo.surgeryinfo}}  </span></h3>
+<form name="newOperationForm" class="form-wrapper">
+  <div class="form-group">
+    <label>{{language.surgeryInfo.surgery}}</label>
+    <input type="text" name="operation" ng-model="patient.operation" required="required" class="form-control"/>
+  </div>
+  <div class="form-group">
+    <label>{{language.surgeryInfo.department}}</label>
+    <input type="text" name="department" ng-model="patient.department" required="required" class="form-control"/>
+  </div>
+  <div class="form-group">
+    <label>{{language.surgeryInfo.hospital}}</label>
+    <input type="text" name="hospital" ng-model="patient.hospital" required="required" class="form-control"/>
+  </div>
+  <div class="form-group">
+    <label>{{language.surgeryInfo.notes}}</label>
+    <textarea name="comments" rows="5" cols="50" ng-model="patient.comments" class="form-control"></textarea>
+  </div>
+  <button ng-click="addOperation(newOperationForm)" class="buttonsubmit">{{language.myprofile.save}}</button>
+</form>
