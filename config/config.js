@@ -9,7 +9,7 @@ var config = {
       name: 'cetas'
     },
     port: 3000,
-    db: '  mongodb://heroku_app35382791:ojbt01f0g98pr8ks7tvbuo8vit@ds035557.mongolab.com:35557/heroku_app35382791'
+    db: 'mongodb://heroku_app35382791:ojbt01f0g98pr8ks7tvbuo8vit@ds035557.mongolab.com:35557/heroku_app35382791'
     
   },
 
