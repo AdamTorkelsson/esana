@@ -43,5 +43,17 @@ else if (process.env.NODE_ENV === 'test') {
   module.exports = app;
 }
 
-  
+else if(process.env.NODE_ENV === 'production'){
+  store = new MongoStore({'db': 'sessions'}, function(err) {
+    app.use(session({
+      secret: 'itsfridayfriday',
+      store: store,
+      saveUninitialized: true,
+      resave: true
+    }));
+    express.init(app, config, session);
+    app.listen(config.port);
+    console.log('The magic happens on port ' + config.port);
+  })
+}
 
