@@ -27,7 +27,7 @@ module.exports.create = function(req, res, next) {
   //   res.redirect('/form');
   // }
 
-  var fields = [ 'pain', 'nausea', 'dailyActivities', 'routine', 'satisfied',
+  var fields = [ 'pain','painKillers', 'nausea', 'dailyActivities', 'routine', 'satisfied',
       'assess' ];
 
   // fields.forEach(function(elem) {
@@ -38,14 +38,14 @@ module.exports.create = function(req, res, next) {
       // Checks if someone is trying to input other values then 0>=x<=100
     }
   }
-
-  // if painkillers is unanswered
+/*
+  // if painkillers is unanswered //ändrat
   if (req.body.painkillers === '' || req.body.painkillers === undefined) {
     painkillers = "0";
     pageError = true;
   } else {
     painkillers = Enums.yesOrNo.get(req.body.painkillers).value;
-  }
+  }*/
 
   if (req.body.worstThing === '' || req.body.worstThing === undefined) {
     // if worstThing is unanswered
@@ -57,7 +57,7 @@ module.exports.create = function(req, res, next) {
 
   var record = new FormRecord ({
     pain : req.body.pain,
-    painKillers : painkillers,
+    painKillers : req.body.painKillers,
     nausea : req.body.nausea,
     narcosis : req.body.narcosis,
     dailyActivities : req.body.dailyActivities,
@@ -91,7 +91,7 @@ module.exports.create = function(req, res, next) {
         	//Use html: 'htmlhere'
         	//See http://www.nodemailer.com/#address-formatting
         	transporter.sendMail({
-        	    from: 'Cetas <cetasdevelop@gmail.com>',
+        	    from: 'Cetas <adam.torkelsson@gmail.com>',
         	    to: '',
         	    subject: 'Nytt formulär ifyllt',
         	    text: 'Nu har någon fyll i ett formulär... Igen.'

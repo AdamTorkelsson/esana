@@ -9,7 +9,7 @@ var config = {
       name: 'cetas'
     },
     port: 3000,
-    db: 'mongodb://localhost/cetas-development'
+    db: 'mongodb://heroku_app35382791:heroku_app35382791@ds035557.mongolab.com:35557/heroku_app35382791'
     
   },
 
@@ -19,7 +19,7 @@ var config = {
       name: 'cetas'
     },
     port: 3000,
-    db: 'mongodb://localhost/cetas-test'
+    db: 'mongodb://heroku_app35382791:heroku_app35382791@ds035557.mongolab.com:35557/heroku_app35382791'
     
   },
 
@@ -28,9 +28,9 @@ var config = {
     app: {
       name: 'cetas'
     },
-    port: 3000,
-    db: 'mongodb://heroku_app35382791:ojbt01f0g98pr8ks7tvbuo8vit@ds035557.mongolab.com:35557/esana'
-    
+    port: 3000, //mongolab kolla upp.
+    db: 'mongodb://heroku_app35382791:heroku_app35382791@ds035557.mongolab.com:35557/heroku_app35382791'
+
   }
 };
 

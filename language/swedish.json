@@ -20,6 +20,9 @@
 		"questionPainkillers": "Har du tagit smärtstillande senaste timmarna?",
 			"yes": "Ja",
 			"no": "Nej",
+	  "questionPainkillers2": "Svår smärta något??",
+			  "noPain": "Inte alls",
+			  "worstPain": "Hela tiden",
 		"questionNausea": "Svår Smärta",
 			"noNausea": "Inte alls",
 			"severeNausea": "Hela tiden",
@@ -29,10 +32,10 @@
 		"questionDaily": "Känsla av oro eller ångest?",
 			"notAtAll": "Inte alls",
 			"completely": "Hela tiden",
-		"questionRoutine": "Har du återgått till arbete eller annan vardagsrutin?",
-		"questionSatisfied": "Hur nöjd är du med återhämtningen?",
-			"dissatisfied": "Mycket missnöjd",
-			"satisfied": "Mycket nöjd",
+		"questionRoutine": "Svårt att komma ihåg, klara koncentration",
+		"questionSatisfied": "Är det svårt att svara på dessa frågor?",
+			"dissatisfied": "Enkelt",
+			"satisfied": "Mycket svårt",
 		"questionWorst": "Markera det besvär som är värst?",
 		"worst": {
 			"pain": "Smärta",
@@ -40,12 +43,12 @@
 			"immobility": "Orörlighet",
 			"insomnia": "Sömnbesvär",
 			"fever": "Feber",
-			"noSymptoms": "Inget besvär"
+		  "noSymptoms": "Inget besvär"
 		},
 		"questionAssess": "Bedöm appens användarvänlighet",
 			"hardToUse": "Mycket svåranvänd",
 			"easyToUse": "Lätt att använda",
-		"comments": "Anteckningar",
+		"comments": "Någon annan komplikation?",
 		"submit": "Skicka"
 	},
 	

@@ -13,12 +13,14 @@
       </div>
     </div>
     <div class="panel panel-default"> 
-      <div class="panel-heading">2. {{language.form.questionPainkillers}}</div>
+      <div class="panel-heading">2. {{language.form.questionPainkillers}}</div> <!--ändrat-->
       <div class="panel-body">
-        <p>{{language.form.yes}}
+        <div class="div"> <span style="float: left">{{language.form.noPain}} </span><span style="float: right">{{language.form.worstPain}} </span></div><!--ändrat-->
+        <input type="range" name="painKillers" ng-model="record.painKillers" list="rangeTicks" required="required"/> <!--//ändrat-->
+      <!--  <p>{{language.form.yes}}
           <input type="radio" name="painkillers" value="yes" ng-model="record.painkillers" required="required"/>{{language.form.no}}
           <input type="radio" name="painkillers" value="no" ng-model="record.painkillers"/>
-        </p>
+        </p>-->
       </div>
     </div>
     <div class="panel panel-default">

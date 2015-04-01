@@ -5,7 +5,7 @@ var mongoose = require('mongoose'),
 //TODO: patientId = number
 var FormRecordSchema = new Schema({
   pain: Number,
-  painKillers: String,
+  painKillers: Number, //ändrat
   nausea: Number,
   narcosis: Number,
   dailyActivities: Number,
