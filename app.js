@@ -1,3 +1,4 @@
+
 var express = require('express'),
   config = require('./config/config'),
   glob = require('glob'),
@@ -20,18 +21,23 @@ var app = express();
 var express = require('./config/express')
 
 if (process.env.NODE_ENV === 'development') {
-  store = new MongoStore({'db': 'sessions'}, function(err) {
+  console.log("adam22221");
+  console.log();
+  store = new MongoStore({db: 'session'}, function(err) {
     app.use(session({
+      host: 'mongodb://Torkelsson:Torkelsson@ds059661.mongolab.com:59661/esanadatabase',
       secret: 'itsfridayfriday',
       store: store,
       saveUninitialized: true,
       resave: true
     }));
+    console.log("adam22225");
     express.init(app, config, session);
     app.listen(config.port);
     console.log('The magic happens on port ' + config.port);
   })
 }
+
 else if (process.env.NODE_ENV === 'test') {
   app.use(session({
       secret: 'itsfridayfriday',
@@ -44,8 +50,10 @@ else if (process.env.NODE_ENV === 'test') {
 }
 
 else if(process.env.NODE_ENV === 'production'){
-  store = new MongoStore({'db': 'sessions'}, function(err) {
+
+  store = new MongoStore({'db': 'session'}, function(err) {
     app.use(session({
+
       secret: 'itsfridayfriday',
       store: store,
       saveUninitialized: true,
