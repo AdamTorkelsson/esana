@@ -22,10 +22,9 @@ var express = require('./config/express')
 
 if (process.env.NODE_ENV === 'development') {
   console.log("adam22221");
-  console.log();
   store = new MongoStore({db: 'session'}, function(err) {
     app.use(session({
-      host: 'mongodb://Torkelsson:Torkelsson@ds059661.mongolab.com:59661/esanadatabase',
+
       secret: 'itsfridayfriday',
       store: store,
       saveUninitialized: true,

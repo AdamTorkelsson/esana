@@ -41,7 +41,7 @@ var init = function(app, config, session) {
     res.locals.language = readLanguageFile();;
     next();
   });
-  
+
   require('./routes')(app, passport);
   require('./passport')(passport); // pass passport for configuration
 
