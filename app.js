@@ -33,8 +33,8 @@ if (process.env.NODE_ENV === 'development') {
     }));
     console.log("adam22225");
     express.init(app, config, session);
-    app.listen(config.port);
-    console.log('The magic happens on port ' + config.port);
+    app.listen(process.env.PORT ||config.port);
+    console.log('The magic happens on port ' + process.env.PORT + config.port);
   })
 }
 
