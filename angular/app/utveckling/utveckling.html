@@ -1,0 +1,131 @@
+  <div class="">
+      <h1>Graphical overview of the recovery</h1>
+      <h3>With comparisons to the average recovery</h3>
+ </div>
+
+
+  <h3>{{language.patient.patientdata}} </h3>
+  <div>
+      <div>{{language.patient.name}}: {{patient.firstname}} {{patient.lastname}}</div>
+      <div>{{language.patient.personalnumber}}: {{patient.personal_number}}</div>
+      <div>{{language.patient.address1}}: {{patient.address1}} </div>
+      <div>{{language.patient.address2}}: {{patient.address2}}</div>
+      <div>{{language.patient.postalnumber}}: {{patient.postalno}} </div>
+      <div>{{language.patient.city}}: {{patient.city}}</div>
+      <div>{{language.patient.phone}}: {{patient.mobile}}</div>
+      <div>{{language.patient.email}}: {{patient.local.email}}</div>
+      <h3>{{language.formrecord.formdata}}</h3>
+      <table id="formTable" class="table table-hover">
+          <thead>
+          <tr>
+              <th ng-click="predicate='date'; reverse=!reverse" class="clickable">
+
+                  {{language.formrecord.date}}<i ng-class="{'fa-sort-desc': predicate==='date'&amp;&amp;reverse, 'fa-sort-asc': predicate==='date'&amp;&amp;!reverse}" class="fa"> </i>
+              </th>
+              <th ng-click="predicate='pain'; reverse=!reverse" class="clickable">{{language.formrecord.pain}}<i ng-class="{'fa-sort-desc': predicate==='pain'&amp;&amp;reverse, 'fa-sort-asc': predicate==='pain'&amp;&amp;!reverse}" class="fa"></i></th>
+              <th ng-click="predicate='painKillers'; reverse=!reverse" class="clickable">{{language.formrecord.painKillers}}<i ng-class="{'fa-sort-desc': predicate==='painKillers'&amp;&amp;reverse, 'fa-sort-asc': predicate==='painKillers'&amp;&amp;!reverse}" class="fa"></i></th>
+              <th ng-click="predicate='nausea'; reverse=!reverse" class="clickable">{{language.formrecord.nausea}}<i ng-class="{'fa-sort-desc': predicate==='nausea'&amp;&amp;reverse, 'fa-sort-asc': predicate==='nausea'&amp;&amp;!reverse}" class="fa"></i></th>
+              <th ng-click="predicate='narcosis'; reverse=!reverse" class="clickable">{{language.formrecord.narcosis}}<i ng-class="{'fa-sort-desc': predicate==='narcosis'&amp;&amp;reverse, 'fa-sort-asc': predicate==='narcosis'&amp;&amp;!reverse}" class="fa"></i></th>
+              <th ng-click="predicate='dailyActivities'; reverse=!reverse" class="clickable">{{language.formrecord.dailyActivities}}<i ng-class="{'fa-sort-desc': predicate==='dailyActivities'&amp;&amp;reverse, 'fa-sort-asc': predicate==='dailyActivities'&amp;&amp;!reverse}" class="fa"></i></th>
+              <th ng-click="predicate='routine'; reverse=!reverse" class="clickable">{{language.formrecord.routine}}<i ng-class="{'fa-sort-desc': predicate==='routine'&amp;&amp;reverse, 'fa-sort-asc': predicate==='routine'&amp;&amp;!reverse}" class="fa"></i></th>
+              <th ng-click="predicate='satisfied'; reverse=!reverse" class="clickable">{{language.formrecord.satisfied}}<i ng-class="{'fa-sort-desc': predicate==='satisfied'&amp;&amp;reverse, 'fa-sort-asc': predicate==='satisfied'&amp;&amp;!reverse}" class="fa"></i></th>
+              <th ng-click="predicate='worstThing'; reverse=!reverse" class="clickable">{{language.formrecord.worstThing}}<i ng-class="{'fa-sort-desc': predicate==='worstThing'&amp;&amp;reverse, 'fa-sort-asc': predicate==='worstThing'&amp;&amp;!reverse}" class="fa"></i></th>
+              <th ng-click="predicate='assess'; reverse=!reverse" class="clickable">{{language.formrecord.assess}}<i ng-class="{'fa-sort-desc': predicate==='assess'&amp;&amp;reverse, 'fa-sort-asc': predicate==='assess'&amp;&amp;!reverse}" class="fa"></i></th>
+              <th>{{language.formrecord.comments}}</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr ng-repeat="form in patient.formrecords | orderBy:predicate:reverse">
+              <td>
+
+                  {{form.date | date : 'yyyy-MM-dd HH:mm:ss' }}
+              </td>
+              <td>
+
+                  {{form.pain}}
+              </td>
+              <td>
+
+                  {{form.painKillers}}
+              </td>
+              <td>
+
+                  {{form.nausea}}
+              </td>
+              <td>
+
+                  {{form.narcosis}}
+              </td>
+              <td>
+
+                  {{form.dailyActivities}}
+              </td>
+              <td>
+
+                  {{form.routine}}
+              </td>
+              <td>
+
+                  {{form.satisfied}}
+              </td>
+              <td>
+
+                  {{form.worstThing}}
+              </td>
+              <td>
+
+                  {{form.assess}}
+              </td>
+              <td>{{form.comments}}</td>
+          </tr>
+          </tbody>
+      </table>
+      <h3>{{language.surgeryInfo.operations}}</h3>
+      <table id="operationTable" class="table table-hover">
+          <thead>
+          <tr>
+              <th ng-click="predicate='date'; reverse=!reverse" class="clickable">
+
+                  {{language.formrecord.date}}<i ng-class="{'fa-sort-desc': predicate==='date'&amp;&amp;reverse, 'fa-sort-asc': predicate==='date'&amp;&amp;!reverse}" class="fa"> </i>
+              </th>
+              <th ng-click="predicate='operation'; reverse=!reverse" class="clickable">
+
+                  {{language.surgeryInfo.surgery}}<i ng-class="{'fa-sort-desc': predicate==='operation'&amp;&amp;reverse, 'fa-sort-asc': predicate==='operation'&amp;&amp;!reverse}" class="fa"> </i>
+              </th>
+              <th ng-click="predicate='hospital'; reverse=!reverse" class="clickable">
+
+                  {{language.surgeryInfo.hospital}}<i ng-class="{'fa-sort-desc': predicate==='hospital'&amp;&amp;reverse, 'fa-sort-asc': predicate==='hospital'&amp;&amp;!reverse}" class="fa"></i>
+              </th>
+              <th ng-click="predicate='department'; reverse=!reverse" class="clickable">
+
+                  {{language.surgeryInfo.department}}<i ng-class="{'fa-sort-desc': predicate==='department'&amp;&amp;reverse, 'fa-sort-asc': predicate==='department'&amp;&amp;!reverse}" class="fa"></i>
+              </th>
+              <th>{{language.surgeryInfo.notes}}</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr ng-repeat="operation in patient.surgeries | orderBy:predicate:reverse">
+              <td>
+
+                  {{operation.date | date : 'yyyy-MM-dd HH:mm' }}
+              </td>
+              <td>
+
+                  {{operation.operation}}
+              </td>
+              <td>
+
+                  {{operation.hospital}}
+              </td>
+              <td>
+
+                  {{operation.department}}
+              </td>
+              <td>
+
+                  {{operation.comments}}
+              </td>
+          </tr>
+          </tbody>
+      </table>
+  </div>

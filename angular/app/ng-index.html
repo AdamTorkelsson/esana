@@ -16,8 +16,38 @@
       <div id="sidebar-wrapper">
         <h1 class="text-center"><img ng-src="/img/Logo_White.png" width="100" ui-sref="index" style="cursor:pointer"></h1>
         <div ng-if="user.firstname">
-          <div ng-if="user.role == 0"><a ui-sref="patientform" ui-sref-active="textcolorbutton" class="button"><span ng-bind="language.index.form" class="buttontext"></span></a><a ui-sref="profile" ui-sref-active="textcolorbutton" class="button"><span ng-bind="language.index.myprofile" class="buttontext"></span></a><a ui-sref="password" ui-sref-active="textcolorbutton" class="button"><span ng-bind="language.index.password" class="buttontext"></span></a><a href="/logout" ng-click="logout()" ui-sref-active="textcolorbutton" class="buttonsign"><span ng-bind="language.index.logout" class="buttontext"></span></a></div>
-          <div ng-if="user.role == 1"><a ui-sref="signup" ui-sref-active="textcolorbutton" class="button"><span ng-bind="language.index.register" class="buttontext"></span></a><a ui-sref="patients" ng-class="{'textcolorbutton': state.current.name==='patients' || state.current.name==='addoperation' || state.current.name==='patient' || state.current.name==='patientform'}" class="button"><span ng-bind="language.index.mypatients" class="buttontext"></span></a><a ui-sref="password" ui-sref-active="textcolorbutton" class="button"><span ng-bind="language.index.password" class="buttontext"></span></a><a href="logout" ng-click="logout()" ui-sref-active="textcolorbutton" class="buttonsign"><span ng-bind="language.index.logout" class="buttontext"></span></a></div>
+
+          <div ng-if="user.role == 0">
+            <a ui-sref="utveckling" ng-click="viewPatient(patient._id)" ui-sref-active="textcolorbutton" class="button">
+              <span ng-bind="language.index.utveckling" class="buttontext"></span></a>
+
+            <a ui-sref="patientform" ui-sref-active="textcolorbutton" class="button">
+            <span ng-bind="language.index.form" class="buttontext"></span></a>
+            <a ui-sref="profile" ui-sref-active="textcolorbutton" class="button">
+              <span ng-bind="language.index.myprofile" class="buttontext"></span>
+            </a><a ui-sref="password" ui-sref-active="textcolorbutton" class="button">
+            <span ng-bind="language.index.password" class="buttontext"></span></a>
+            <a href="/logout" ng-click="logout()" ui-sref-active="textcolorbutton" class="buttonsign">
+              <span ng-bind="language.index.logout" class="buttontext"></span></a></div>
+
+
+          <div ng-if="user.role == 1">
+        <!--    <a ui-sref="utveckling" ng-click="viewPatient(patient._id)" ui-sref-active="textcolorbutton" class="button">
+              <span ng-bind="language.index.utveckling" class="buttontext"></span></a>-->
+
+
+            <a ui-sref="patients" ng-class="{'textcolorbutton': state.current.name==='patients' || state.current.name==='addoperation' || state.current.name==='patient' || state.current.name==='patientform'}" class="button">
+              <span ng-bind="language.index.mypatients" class="buttontext"></span></a>
+
+            <a ui-sref="signup" ui-sref-active="textcolorbutton" class="button">
+              <span ng-bind="language.index.register" class="buttontext"></span></a>
+
+            <a ui-sref="password" ui-sref-active="textcolorbutton" class="button">
+              <span ng-bind="language.index.password" class="buttontext"></span></a>
+
+            <a href="logout" ng-click="logout()" ui-sref-active="textcolorbutton" class="buttonsign">
+              <span ng-bind="language.index.logout" class="buttontext"></span></a></div>
+
           <div ng-if="user.role == 2"><a ui-sref="signup" ui-sref-active="textcolorbutton" class="button"><span ng-bind="language.index.register" class="buttontext"></span></a><a ui-sref="patients" ng-class="{'textcolorbutton': state.current.name==='patients' || state.current.name==='addoperation' || state.current.name==='patient' || state.current.name==='patientform'}" class="button"><span ng-bind="language.index.mypatients" class="buttontext"></span></a><a ui-sref="password" ui-sref-active="textcolorbutton" class="button"><span ng-bind="language.index.password" class="buttontext"></span></a><a href="logout" ng-click="logout()" ui-sref-active="textcolorbutton" class="buttonsign"><span ng-bind="language.index.logout" class="buttontext"></span></a></div>
           <p ng-bind="language.index.loggedInAs+': '+ user.firstname + ' ' + user.lastname + '  - ' +  user.local.email" style="position:absolute;bottom:0;"></p>
         </div>
@@ -61,6 +91,8 @@
     <script src="/app/formrecord/formrecord.js"></script>
     <script src="/app/patient/patient.controller.js"></script>
     <script src="/app/patient/patient.js"></script>
+    <script src="/app/utveckling/utveckling.controller.js"></script>
+    <script src="/app/utveckling/utveckling.js"></script>
     <script src="http://localhost:35729/livereload.js"></script>
   </body>
 </html>

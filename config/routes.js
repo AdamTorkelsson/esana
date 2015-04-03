@@ -1,4 +1,5 @@
 var home = require('../app/controllers/home');
+//var utveckling = require('../app/controllers/utveckling');
 var user = require('../app/controllers/user');
 var mypatients = require('../app/controllers/mypatients');
 var auth = require('./auth');
@@ -50,6 +51,7 @@ module.exports = function(app, passport) {
 	/******* CORE PAGES ********/
 	app.route('/logout').get(user.logout);
 	app.route('/signup').get(user.signup);
+
 	app.route('/profile').get(user.view);
 	app.route('/mypatients/:p_id').get(user.doctorpatientprofile);
 	app.route('/myprofile').get(user.myprofile).post(user.editprofile);  

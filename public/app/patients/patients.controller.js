@@ -59,7 +59,7 @@ angular.module('myApp')
 	$scope.viewPatient = function(patient_id) {
 		$state.go('patient', {patient_id: patient_id});
 	}
-	
+
 	// Returns a color code depending on the patients status
 	$scope.getStatusColor = function(patient_id) {
 		var patient = $scope.getPatient(patient_id);

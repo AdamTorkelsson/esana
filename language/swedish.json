@@ -5,11 +5,12 @@
 		"form": "Fyll i ett formulär",
 		"register": "Registrera ny patient",
 		"mypatients": "Patienter",
-		"password": "Ändra lösenord",
+		"password": "Inställningar",
 		"logout": "Logga ut",
 		"loggedInAs": "Inloggad som",
 		"andIs": "och är",
-		"welcomeTitle": "Välkommen!"
+		"welcomeTitle": "Välkommen!",
+	  	"utveckling": "Min utveckling"
 	},
 	
 	"form": {
