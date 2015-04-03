@@ -326,3 +326,10 @@
 {"method":"GET","url":"/patients","user":{"id":{"_bsontype":"ObjectID","id":"U\u001d9]ûÅ\f*á1"},"lastname":"Doktorsson","firstname":"Doktor"},"level":"info","message":"","timestamp":"2015-04-03T13:17:43.947Z"}
 {"method":"GET","url":"/patients","user":{"id":{"_bsontype":"ObjectID","id":"U\u001d9]ûÅ\f*á1"},"lastname":"Doktorsson","firstname":"Doktor"},"level":"info","message":"","timestamp":"2015-04-03T13:18:01.759Z"}
 {"method":"GET","url":"/patients/551d3bab8b4a150417b30877","user":{"id":{"_bsontype":"ObjectID","id":"U\u001d9]ûÅ\f*á1"},"lastname":"Doktorsson","firstname":"Doktor"},"level":"info","message":"","timestamp":"2015-04-03T13:21:09.486Z"}
+{"method":"GET","url":"/patients","user":{"id":{"_bsontype":"ObjectID","id":"U\u001d9]ûÅ\f*á1"},"lastname":"Doktorsson","firstname":"Doktor"},"level":"info","message":"","timestamp":"2015-04-03T13:34:25.643Z"}
+{"method":"GET","url":"/patients","user":{"id":{"_bsontype":"ObjectID","id":"U\u001d9]ûÅ\f*á1"},"lastname":"Doktorsson","firstname":"Doktor"},"level":"info","message":"","timestamp":"2015-04-03T14:09:04.049Z"}
+{"method":"GET","url":"/patients","user":{"id":{"_bsontype":"ObjectID","id":"U\u001d9]ûÅ\f*á1"},"lastname":"Doktorsson","firstname":"Doktor"},"level":"info","message":"","timestamp":"2015-04-03T14:15:50.254Z"}
+{"method":"GET","url":"/patients","user":{"id":{"_bsontype":"ObjectID","id":"U\u001d9]ûÅ\f*á1"},"lastname":"Doktorsson","firstname":"Doktor"},"level":"info","message":"","timestamp":"2015-04-03T14:15:55.264Z"}
+{"method":"GET","url":"/patients","user":{"id":{"_bsontype":"ObjectID","id":"U\u001d9]ûÅ\f*á1"},"lastname":"Doktorsson","firstname":"Doktor"},"level":"info","message":"","timestamp":"2015-04-03T14:16:00.256Z"}
+{"method":"GET","url":"/patients","user":{"id":{"_bsontype":"ObjectID","id":"U\u001d9]ûÅ\f*á1"},"lastname":"Doktorsson","firstname":"Doktor"},"level":"info","message":"","timestamp":"2015-04-03T14:16:17.256Z"}
+{"method":"GET","url":"/patients/","user":{"id":{"_bsontype":"ObjectID","id":"U\u001eC\u0006.¸\u0019\r¨"},"lastname":"T","firstname":"A"},"level":"info","message":"","timestamp":"2015-04-03T15:13:22.938Z"}

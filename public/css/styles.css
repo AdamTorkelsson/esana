@@ -117,8 +117,9 @@
 }
 
 .buttonsubmit:hover {
-   background: #b15151;
-   border: 1px solid #974646;
+   background: rgba(255, 255, 255, 0.9);
+    color: #FD7575;
+    /*border: 1px solid #ffffff;*/
 }
 
 .buttonsubmit:hover .buttontext{
@@ -304,6 +305,7 @@ th .fa-sort-desc,th .fa-sort-asc{
 }
 
 .headertext {
+    font-weight: 300;
     color: white;
 }
 
@@ -325,4 +327,20 @@ th .fa-sort-desc,th .fa-sort-asc{
    margin-left: 77%;
 }
 
-
+.signuplink {
+    color: #ffffff;
+    text-decoration: none;
+}
+.signuplink:hover {
+    color: #ffffff;
+    font-weight: 800;
+    text-decoration: none;
+}
+.signuplink:visited {
+    color: #ffffff;
+    text-decoration: none;
+}
+.signuplink:active {
+    color: #ffffff;
+    text-decoration: none;
+}

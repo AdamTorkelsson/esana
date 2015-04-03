@@ -13,6 +13,10 @@
         <input type="password" ng-model="user.password" required="required" style="width:40%" class="form-control"/>
       </div>
       <button ng-click="submit(login)" style="margin-left:auto; margin-right:auto" class="buttonsubmit">{{language.loginPage.login}}</button>
+<br>
+      <label class="headertext"> {{language.loginPage.or}} </label>
+     <label class="headertext"> <a ui-sref="signup" class="signuplink">{{language.loginPage.signup}}</a></label>
+
     </form>
   </div>
 </div>

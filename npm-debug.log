@@ -1,30 +1,195 @@
 0 info it worked if it ends with ok
 1 verbose cli [ 'C:\\Program Files\\nodejs\\\\node.exe',
 1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
-1 verbose cli   'start',
-1 verbose cli   '--production' ]
+1 verbose cli   'install',
+1 verbose cli   '-g',
+1 verbose cli   'n',
+1 verbose cli   '2.8.22' ]
 2 info using npm@1.4.28
 3 info using node@v0.10.33
 4 verbose node symlink C:\Program Files\nodejs\\node.exe
-5 verbose run-script [ 'prestart', 'start', 'poststart' ]
-6 info prestart cetas@0.0.1
-7 info start cetas@0.0.1
-8 verbose unsafe-perm in lifecycle true
-9 info cetas@0.0.1 Failed to exec start script
-10 error cetas@0.0.1 start: `node app.js`
-10 error Exit status 8
-11 error Failed at the cetas@0.0.1 start script.
-11 error This is most likely a problem with the cetas package,
-11 error not with npm itself.
-11 error Tell the author that this fails on your system:
-11 error     node app.js
-11 error You can get their info via:
-11 error     npm owner ls cetas
-11 error There is likely additional logging output above.
-12 error System Windows_NT 6.2.9200
-13 error command "C:\\Program Files\\nodejs\\\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "start" "--production"
-14 error cwd C:\Users\Adam\node_modules\eSana
-15 error node -v v0.10.33
-16 error npm -v 1.4.28
-17 error code ELIFECYCLE
-18 verbose exit [ 1, true ]
+5 verbose cache add [ 'n', null ]
+6 verbose cache add name=undefined spec="n" args=["n",null]
+7 verbose parsed url { protocol: null,
+7 verbose parsed url   slashes: null,
+7 verbose parsed url   auth: null,
+7 verbose parsed url   host: null,
+7 verbose parsed url   port: null,
+7 verbose parsed url   hostname: null,
+7 verbose parsed url   hash: null,
+7 verbose parsed url   search: null,
+7 verbose parsed url   query: null,
+7 verbose parsed url   pathname: 'n',
+7 verbose parsed url   path: 'n',
+7 verbose parsed url   href: 'n' }
+8 verbose cache add [ '2.8.22', null ]
+9 verbose cache add name=undefined spec="2.8.22" args=["2.8.22",null]
+10 verbose parsed url { protocol: null,
+10 verbose parsed url   slashes: null,
+10 verbose parsed url   auth: null,
+10 verbose parsed url   host: null,
+10 verbose parsed url   port: null,
+10 verbose parsed url   hostname: null,
+10 verbose parsed url   hash: null,
+10 verbose parsed url   search: null,
+10 verbose parsed url   query: null,
+10 verbose parsed url   pathname: '2.8.22',
+10 verbose parsed url   path: '2.8.22',
+10 verbose parsed url   href: '2.8.22' }
+11 silly lockFile d1854cae-n n
+12 verbose lock n C:\Users\Adam\AppData\Roaming\npm-cache\d1854cae-n.lock
+13 silly lockFile b18dddf0-2-8-22 2.8.22
+14 verbose lock 2.8.22 C:\Users\Adam\AppData\Roaming\npm-cache\b18dddf0-2-8-22.lock
+15 silly lockFile d1854cae-n n
+16 silly lockFile d1854cae-n n
+17 silly lockFile b18dddf0-2-8-22 2.8.22
+18 silly lockFile b18dddf0-2-8-22 2.8.22
+19 verbose addNamed [ 'n', '' ]
+20 verbose addNamed [ null, '*' ]
+21 silly lockFile 6b58d7dc-n n@
+22 verbose lock n@ C:\Users\Adam\AppData\Roaming\npm-cache\6b58d7dc-n.lock
+23 verbose addNamed [ '2.8.22', '' ]
+24 verbose addNamed [ null, '*' ]
+25 silly lockFile 99691806-2-8-22 2.8.22@
+26 verbose lock 2.8.22@ C:\Users\Adam\AppData\Roaming\npm-cache\99691806-2-8-22.lock
+27 silly addNameRange { name: 'n', range: '*', hasData: false }
+28 silly addNameRange { name: '2.8.22', range: '*', hasData: false }
+29 verbose request where is /2.8.22
+30 verbose request registry https://registry.npmjs.org/
+31 verbose request id 29c65d89c3f0a9ee
+32 verbose url raw /2.8.22
+33 verbose url resolving [ 'https://registry.npmjs.org/', './2.8.22' ]
+34 verbose url resolved https://registry.npmjs.org/2.8.22
+35 verbose request where is https://registry.npmjs.org/2.8.22
+36 info trying registry request attempt 1 at 17:37:08
+37 http GET https://registry.npmjs.org/2.8.22
+38 verbose request where is /n
+39 verbose request registry https://registry.npmjs.org/
+40 verbose url raw /n
+41 verbose url resolving [ 'https://registry.npmjs.org/', './n' ]
+42 verbose url resolved https://registry.npmjs.org/n
+43 verbose request where is https://registry.npmjs.org/n
+44 info trying registry request attempt 1 at 17:37:08
+45 verbose etag "5KTW0QSDCVT36AG0GI73HG2OZ"
+46 http GET https://registry.npmjs.org/n
+47 http 304 https://registry.npmjs.org/n
+48 silly registry.get cb [ 304,
+48 silly registry.get   { date: 'Fri, 03 Apr 2015 15:37:20 GMT',
+48 silly registry.get     server: 'Apache',
+48 silly registry.get     via: '1.1 varnish',
+48 silly registry.get     'last-modified': 'Fri, 03 Apr 2015 15:37:20 GMT',
+48 silly registry.get     'cache-control': 'max-age=60',
+48 silly registry.get     etag: '"5KTW0QSDCVT36AG0GI73HG2OZ"',
+48 silly registry.get     age: '23',
+48 silly registry.get     'x-served-by': 'cache-fra1237-FRA',
+48 silly registry.get     'x-cache': 'HIT',
+48 silly registry.get     'x-cache-hits': '1',
+48 silly registry.get     'x-timer': 'S1428075440.574991,VS0,VE0',
+48 silly registry.get     vary: 'Accept',
+48 silly registry.get     'content-length': '0',
+48 silly registry.get     'keep-alive': 'timeout=10, max=50',
+48 silly registry.get     connection: 'Keep-Alive' } ]
+49 verbose etag https://registry.npmjs.org/n from cache
+50 silly addNameRange number 2 { name: 'n', range: '*', hasData: true }
+51 silly addNameRange versions [ 'n',
+51 silly addNameRange   [ '0.0.1',
+51 silly addNameRange     '0.0.2',
+51 silly addNameRange     '0.0.3',
+51 silly addNameRange     '0.0.4',
+51 silly addNameRange     '0.1.0',
+51 silly addNameRange     '0.1.1',
+51 silly addNameRange     '0.1.2',
+51 silly addNameRange     '0.2.0',
+51 silly addNameRange     '0.2.1',
+51 silly addNameRange     '0.2.2',
+51 silly addNameRange     '0.3.0',
+51 silly addNameRange     '0.4.0',
+51 silly addNameRange     '0.4.1',
+51 silly addNameRange     '0.4.2',
+51 silly addNameRange     '0.5.0',
+51 silly addNameRange     '0.5.1',
+51 silly addNameRange     '0.5.2',
+51 silly addNameRange     '0.5.3',
+51 silly addNameRange     '0.5.4',
+51 silly addNameRange     '0.6.0',
+51 silly addNameRange     '0.6.1',
+51 silly addNameRange     '0.7.0',
+51 silly addNameRange     '0.7.1',
+51 silly addNameRange     '0.7.2',
+51 silly addNameRange     '0.7.3',
+51 silly addNameRange     '0.8.0',
+51 silly addNameRange     '0.8.1',
+51 silly addNameRange     '0.8.2',
+51 silly addNameRange     '0.9.0',
+51 silly addNameRange     '0.9.1',
+51 silly addNameRange     '0.9.2',
+51 silly addNameRange     '0.9.3',
+51 silly addNameRange     '1.0.0',
+51 silly addNameRange     '1.1.0',
+51 silly addNameRange     '1.2.1',
+51 silly addNameRange     '1.2.2',
+51 silly addNameRange     '1.2.3',
+51 silly addNameRange     '1.2.4',
+51 silly addNameRange     '1.2.5',
+51 silly addNameRange     '1.2.6',
+51 silly addNameRange     '1.2.7',
+51 silly addNameRange     '1.2.8',
+51 silly addNameRange     '1.2.9',
+51 silly addNameRange     '1.2.11',
+51 silly addNameRange     '1.2.13',
+51 silly addNameRange     '1.2.14',
+51 silly addNameRange     '1.3.0' ] ]
+52 verbose addNamed [ 'n', '1.3.0' ]
+53 verbose addNamed [ '1.3.0', '1.3.0' ]
+54 silly lockFile 3a747da7-n-1-3-0 n@1.3.0
+55 verbose lock n@1.3.0 C:\Users\Adam\AppData\Roaming\npm-cache\3a747da7-n-1-3-0.lock
+56 silly lockFile 3a747da7-n-1-3-0 n@1.3.0
+57 silly lockFile 3a747da7-n-1-3-0 n@1.3.0
+58 silly lockFile 6b58d7dc-n n@
+59 silly lockFile 6b58d7dc-n n@
+60 http 404 https://registry.npmjs.org/2.8.22
+61 verbose headers { date: 'Fri, 03 Apr 2015 15:37:20 GMT',
+61 verbose headers   server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+61 verbose headers   'content-type': 'application/json',
+61 verbose headers   'cache-control': 'max-age=0',
+61 verbose headers   'content-length': '51',
+61 verbose headers   'accept-ranges': 'bytes',
+61 verbose headers   via: '1.1 varnish',
+61 verbose headers   age: '0',
+61 verbose headers   'x-served-by': 'cache-fra1220-FRA',
+61 verbose headers   'x-cache': 'MISS',
+61 verbose headers   'x-cache-hits': '0',
+61 verbose headers   'x-timer': 'S1428075440.566606,VS0,VE183',
+61 verbose headers   'keep-alive': 'timeout=10, max=50',
+61 verbose headers   connection: 'Keep-Alive' }
+62 silly registry.get cb [ 404,
+62 silly registry.get   { date: 'Fri, 03 Apr 2015 15:37:20 GMT',
+62 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+62 silly registry.get     'content-type': 'application/json',
+62 silly registry.get     'cache-control': 'max-age=0',
+62 silly registry.get     'content-length': '51',
+62 silly registry.get     'accept-ranges': 'bytes',
+62 silly registry.get     via: '1.1 varnish',
+62 silly registry.get     age: '0',
+62 silly registry.get     'x-served-by': 'cache-fra1220-FRA',
+62 silly registry.get     'x-cache': 'MISS',
+62 silly registry.get     'x-cache-hits': '0',
+62 silly registry.get     'x-timer': 'S1428075440.566606,VS0,VE183',
+62 silly registry.get     'keep-alive': 'timeout=10, max=50',
+62 silly registry.get     connection: 'Keep-Alive' } ]
+63 silly lockFile 99691806-2-8-22 2.8.22@
+64 silly lockFile 99691806-2-8-22 2.8.22@
+65 error 404 404 Not Found: 2.8.22
+65 error 404
+65 error 404 '2.8.22' is not in the npm registry.
+65 error 404 You should bug the author to publish it
+65 error 404
+65 error 404 Note that you can also install from a
+65 error 404 tarball, folder, or http url, or git url.
+66 error System Windows_NT 6.2.9200
+67 error command "C:\\Program Files\\nodejs\\\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "-g" "n" "2.8.22"
+68 error cwd C:\Users\Adam\node_modules\eSana
+69 error node -v v0.10.33
+70 error npm -v 1.4.28
+71 error code E404
+72 verbose exit [ 1, true ]

@@ -56,7 +56,9 @@
 	"loginPage": {
 		"login": "Logga in",
 		"username": "Email",
-		"password": "Lösenord"
+		"password": "Lösenord",
+	  "signup": "Skapa konto",
+	  "or": "eller:"
 	},
 	
 	"myprofile": {
