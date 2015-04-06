@@ -11,10 +11,11 @@ var FormRecordSchema = new Schema({
   dailyActivities: Number,
   routine: Number,
   satisfied: Number,
+  recovery: Number,
   worstThing: String,
-  assess: Number,
+  worstAsset: String,
   comments: String,
-  date: { type: Date, default: Date.now, required: true },
+  date: { type: Date, default: Date.now, required: true }
 });
 
 module.exports.FormRecordSchema = FormRecordSchema;

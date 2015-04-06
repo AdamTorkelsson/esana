@@ -23,14 +23,16 @@ angular.module('myApp')
 
     $scope.record = {
       pain : 50,
-      //painKillers : "",
+      painKillers : 50,
       nausea : 50,
       narcosis : 50,
       dailyActivities : 50,
       routine : 50,
       satisfied : 50,
-      //worstThing : "",
-      assess : 50,
+      recovery : 50,
+      worstThing : "",
+      worstAsset : "",
+      comments : "",
       title:  "Svara på formulär"
     };
     

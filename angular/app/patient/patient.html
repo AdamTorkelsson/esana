@@ -18,14 +18,14 @@
           {{language.formrecord.date}}<i ng-class="{'fa-sort-desc': predicate==='date'&amp;&amp;reverse, 'fa-sort-asc': predicate==='date'&amp;&amp;!reverse}" class="fa"> </i>
         </th>
         <th ng-click="predicate='pain'; reverse=!reverse" class="clickable">{{language.formrecord.pain}}<i ng-class="{'fa-sort-desc': predicate==='pain'&amp;&amp;reverse, 'fa-sort-asc': predicate==='pain'&amp;&amp;!reverse}" class="fa"></i></th>
-        <th ng-click="predicate='painKillers'; reverse=!reverse" class="clickable">{{language.formrecord.painKillers}}<i ng-class="{'fa-sort-desc': predicate==='painKillers'&amp;&amp;reverse, 'fa-sort-asc': predicate==='painKillers'&amp;&amp;!reverse}" class="fa"></i></th>
         <th ng-click="predicate='nausea'; reverse=!reverse" class="clickable">{{language.formrecord.nausea}}<i ng-class="{'fa-sort-desc': predicate==='nausea'&amp;&amp;reverse, 'fa-sort-asc': predicate==='nausea'&amp;&amp;!reverse}" class="fa"></i></th>
         <th ng-click="predicate='narcosis'; reverse=!reverse" class="clickable">{{language.formrecord.narcosis}}<i ng-class="{'fa-sort-desc': predicate==='narcosis'&amp;&amp;reverse, 'fa-sort-asc': predicate==='narcosis'&amp;&amp;!reverse}" class="fa"></i></th>
         <th ng-click="predicate='dailyActivities'; reverse=!reverse" class="clickable">{{language.formrecord.dailyActivities}}<i ng-class="{'fa-sort-desc': predicate==='dailyActivities'&amp;&amp;reverse, 'fa-sort-asc': predicate==='dailyActivities'&amp;&amp;!reverse}" class="fa"></i></th>
         <th ng-click="predicate='routine'; reverse=!reverse" class="clickable">{{language.formrecord.routine}}<i ng-class="{'fa-sort-desc': predicate==='routine'&amp;&amp;reverse, 'fa-sort-asc': predicate==='routine'&amp;&amp;!reverse}" class="fa"></i></th>
         <th ng-click="predicate='satisfied'; reverse=!reverse" class="clickable">{{language.formrecord.satisfied}}<i ng-class="{'fa-sort-desc': predicate==='satisfied'&amp;&amp;reverse, 'fa-sort-asc': predicate==='satisfied'&amp;&amp;!reverse}" class="fa"></i></th>
+        <th ng-click="predicate='recovery'; reverse=!reverse" class="clickable">{{language.formrecord.recovery}}<i ng-class="{'fa-sort-desc': predicate==='recovery'&amp;&amp;reverse, 'fa-sort-asc': predicate==='recovery'&amp;&amp;!reverse}" class="fa"></i></th>
         <th ng-click="predicate='worstThing'; reverse=!reverse" class="clickable">{{language.formrecord.worstThing}}<i ng-class="{'fa-sort-desc': predicate==='worstThing'&amp;&amp;reverse, 'fa-sort-asc': predicate==='worstThing'&amp;&amp;!reverse}" class="fa"></i></th>
-        <th ng-click="predicate='assess'; reverse=!reverse" class="clickable">{{language.formrecord.assess}}<i ng-class="{'fa-sort-desc': predicate==='assess'&amp;&amp;reverse, 'fa-sort-asc': predicate==='assess'&amp;&amp;!reverse}" class="fa"></i></th>
+        <th ng-click="predicate='worstAsset'; reverse=!reverse" class="clickable">{{language.formrecord.worstAsset}}<i ng-class="{'fa-sort-desc': predicate==='worstAsset'&amp;&amp;reverse, 'fa-sort-asc': predicate==='worstAsset'&amp;&amp;!reverse}" class="fa"></i></th>
         <th>{{language.formrecord.comments}}</th>
       </tr>
     </thead>
@@ -38,10 +38,6 @@
         <td>
            
           {{form.pain}}
-        </td>
-        <td>
-           
-          {{form.painKillers}}
         </td>
         <td>
            
@@ -60,17 +56,22 @@
           {{form.routine}}
         </td>
         <td>
-           
-          {{form.satisfied}}
+
+        {{form.satisfied}}
+      </td>
+        <td>
+
+          {{form.recovery}}
         </td>
         <td>
            
           {{form.worstThing}}
         </td>
         <td>
-           
-          {{form.assess}}
+
+          {{form.worstAsset}}
         </td>
+
         <td>{{form.comments}}</td>
       </tr>
     </tbody>

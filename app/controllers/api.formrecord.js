@@ -20,15 +20,15 @@ var mongoose = require('mongoose'),
 module.exports.create = function(req, res, next) {
 
   var pageError = false;
-  var painkillers;
+  var worstAsset;
   var worstThing;
 
   // if (req.user === undefined) {
   //   res.redirect('/form');
   // }
 
-  var fields = [ 'pain','painKillers', 'nausea', 'dailyActivities', 'routine', 'satisfied',
-      'assess' ];
+  var fields = [ 'pain','painKillers', 'nausea', 'narcosis',
+    'dailyActivities', 'routine', 'satisfied', 'recovery' ];
 
   // fields.forEach(function(elem) {
   for (var int = 0; int < fields.length; int++) {
@@ -38,14 +38,14 @@ module.exports.create = function(req, res, next) {
       // Checks if someone is trying to input other values then 0>=x<=100
     }
   }
-/*
-  // if painkillers is unanswered //ändrat
-  if (req.body.painkillers === '' || req.body.painkillers === undefined) {
-    painkillers = "0";
+
+ // if painkillers is unanswered //ändrat
+  if (req.body.worstAsset === '' || req.body.worstAsset === undefined) {
+    worstAsset = "0";
     pageError = true;
   } else {
-    painkillers = Enums.yesOrNo.get(req.body.painkillers).value;
-  }*/
+    worstAsset = Enums.worstAsset.get(req.body.worstAsset).value;
+  }
 
   if (req.body.worstThing === '' || req.body.worstThing === undefined) {
     // if worstThing is unanswered
@@ -63,8 +63,9 @@ module.exports.create = function(req, res, next) {
     dailyActivities : req.body.dailyActivities,
     routine : req.body.routine,
     satisfied : req.body.satisfied,
+    recovery : req.body.recovery,
     worstThing : worstThing,
-    assess : req.body.assess,
+    worstAsset: worstAsset,
     comments : req.body.comments
   });
   if (pageError) {

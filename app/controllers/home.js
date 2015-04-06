@@ -18,16 +18,18 @@ module.exports.nothere = function(req, res, next) {
 
 module.exports.form = function(req, res, next) {
 	var record = {
-			pain : 50,
-			painKillers : "",
-			nausea : 50,
-			narcosis : 50,
-			dailyActivities : 50,
-			routine : 50,
-			satisfied : 50,
-			worstThing : "",
-			assess : 50,
-			title:  "Svara på formulär"
+		pain : 50,
+		painKillers : 50,
+		nausea : 50,
+		narcosis : 50,
+		dailyActivities : 50,
+		routine : 50,
+		satisfied : 50,
+		recovery : 50,
+		worstThing : "",
+		worstAsset : "",
+		comments : "",
+		title:  "Svara på formulär"
 		};
 	res.render('questions', record);
 };

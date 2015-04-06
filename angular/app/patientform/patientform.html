@@ -12,72 +12,80 @@
         <input type="range" name="pain" ng-model="record.pain" list="rangeTicks" required="required"/>
       </div>
     </div>
-    <div class="panel panel-default"> 
-      <div class="panel-heading">2. {{language.form.questionPainkillers}}</div> <!--ändrat-->
+   <!-- <div class="panel panel-default">
+      <div class="panel-heading">2. {{language.form.questionPainkillers}}</div> <!--ändrat
       <div class="panel-body">
         <div class="div"> <span style="float: left">{{language.form.noPain}} </span><span style="float: right">{{language.form.worstPain}} </span></div><!--ändrat-->
-        <input type="range" name="painKillers" ng-model="record.painKillers" list="rangeTicks" required="required"/> <!--//ändrat-->
+    <!--    <input type="range" name="painKillers" ng-model="record.painKillers" list="rangeTicks" required="required"/> <!--//ändrat-->
       <!--  <p>{{language.form.yes}}
           <input type="radio" name="painkillers" value="yes" ng-model="record.painkillers" required="required"/>{{language.form.no}}
           <input type="radio" name="painkillers" value="no" ng-model="record.painkillers"/>
-        </p>-->
+        </p>
       </div>
-    </div>
+    </div>-->
     <div class="panel panel-default">
-      <div class="panel-heading">3. {{language.form.questionNausea}}</div>
+      <div class="panel-heading">2. {{language.form.questionNausea}}</div>
       <div class="panel-body">
         <div class="div"><span style="float: left">{{language.form.noNausea}} </span><span style="float: right">{{language.form.severeNausea}} </span></div>
         <input type="range" name="nausea" ng-model="record.nausea" list="rangeTicks" required="required"/>
       </div>
     </div>
     <div class="panel panel-default"> 
-      <div class="panel-heading">4. {{language.form.questionNarcosis}}</div>
+      <div class="panel-heading">3. {{language.form.questionNarcosis}}</div>
       <div class="panel-body">
         <div class="div"> <span style="float: left">{{language.form.notAffected}} </span><span style="float: right">{{language.form.veryAffected}} </span></div>
         <input type="range" name="narcosis" ng-model="record.narcosis" list="rangeTicks" required="required"/>
       </div>
     </div>
     <div class="panel panel-default"> 
-      <div class="panel-heading">5. {{language.form.questionDaily}}</div>
+      <div class="panel-heading">4. {{language.form.questionDaily}}</div>
       <div class="panel-body">
         <div class="div"> <span style="float: left">{{language.form.notAtAll}} </span><span style="float: right">{{language.form.completely}} </span></div>
         <input type="range" name="dailyActivities" ng-model="record.dailyActivities" list="rangeTicks" required="required"/>
       </div>
     </div>
     <div class="panel panel-default"> 
-      <div class="panel-heading">6. {{language.form.questionRoutine}}</div>
+      <div class="panel-heading">5. {{language.form.questionRoutine}}</div>
       <div class="panel-body">
         <div class="div"> <span style="float: left">{{language.form.notAtAll}} </span><span style="float: right">{{language.form.completely}} </span></div>
         <input type="range" name="routine" ng-model="record.routine" list="rangeTicks" required="required"/>
       </div>
     </div>
     <div class="panel panel-default"> 
-      <div class="panel-heading">7. {{language.form.questionSatisfied}}</div>
+      <div class="panel-heading">6. {{language.form.questionSatisfied}}</div>
       <div class="panel-body">
         <div class="div"> <span style="float: left">{{language.form.dissatisfied}} </span><span style="float: right">{{language.form.satisfied}} </span></div>
         <input type="range" name="satisfied" ng-model="record.satisfied" list="rangeTicks" required="required"/>
       </div>
     </div>
-    <div class="panel panel-default"> 
-      <div class="panel-heading">8. {{language.form.questionWorst}}</div>
+    <div class="panel panel-default">
+      <div class="panel-heading">7. {{language.form.questionRecovery}}</div>
       <div class="panel-body">
-        <p>
-          <input type="radio" name="worstThing" value="pain" ng-model="record.worstThing" required="required"/>{{language.form.worst.pain}}
-          <input type="radio" name="worstThing" ng-model="record.worstThing" value="nausea"/>{{language.form.worst.nausea}}    
-          <input type="radio" name="worstThing" ng-model="record.worstThing" value="immobility"/>{{language.form.worst.immobility}}  
-          <input type="radio" name="worstThing" ng-model="record.worstThing" value="insomnia"/>{{language.form.worst.insomnia}}  
-          <input type="radio" name="worstThing" ng-model="record.worstThing" value="fever"/>{{language.form.worst.fever}}  
-          <input type="radio" name="worstThing" ng-model="record.worstThing" value="noSymptoms"/>{{language.form.worst.noSymptoms}}
-        </p>
+        <div class="div"> <span style="float: left">{{language.form.easy}} </span><span style="float: right">{{language.form.hard}} </span></div>
+        <input type="range" name="recovery" ng-model="record.recovery" list="rangeTicks" required="required"/>
       </div>
     </div>
+    <div class="panel panel-default">
+    <div class="panel-heading">8. {{language.form.questionWorst}}</div>
+    <div class="panel-body">
+      <p>
+        <input type="radio" name="worstThing" value="pain" ng-model="record.worstThing" required="required"/>{{language.form.worst.pain}}
+        <input type="radio" name="worstThing" ng-model="record.worstThing" value="nausea"/>{{language.form.worst.nausea}}
+      </p>
+    </div>
+  </div>
+
     <div class="panel panel-default"> 
-      <div class="panel-heading">9. {{language.form.questionAssess}}</div>
+      <div class="panel-heading">9. {{language.form.questionAsset}}</div>
       <div class="panel-body">
-        <div class="div"> <span style="float: left">{{language.form.hardToUse}} </span><span style="float: right">{{language.form.easyToUse}} </span></div>
+        <p>
+          <input type="radio" name="worstAsset" value="hardToUse" ng-model="record.worstAsset" required="required"/>{{language.form.use.hardToUse}}
+          <input type="radio" name="worstAsset" ng-model="record.worstAsset" value="easyToUse"/>{{language.form.use.easyToUse}}
+        </p>
+      <!--  <div class="div"> <span style="float: left">{{language.form.hardToUse}} </span><span style="float: right">{{language.form.easyToUse}} </span></div>
         <input type="range" name="assess" ng-model="record.assess" list="rangeTicks" required="required"/>
-      </div>
-      <div ng-if="user.role==1" class="panel panel-default">
+      --></div></div>
+      <div class="panel panel-default">
         <div class="panel-heading">10. {{language.form.comments}}</div>
         <div class="panel-body">
           <textarea name="comments" rows="5" cols="50" ng-model="record.comments" class="form-control"></textarea>

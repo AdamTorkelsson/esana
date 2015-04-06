@@ -5,18 +5,14 @@
 
 var Enum = require('enum');
 
-var yesOrNo = new Enum({
-	'yes' : 'Yes',
-	'no' : 'No'
+var worstAsset = new Enum({
+	'hardToUse' : 'Ja',
+	'easyToUse' : 'Nej'
 });
 
 var worstThing = new Enum({
-	'pain' : 'Smärta',
-	'nausea' : 'Illamående',
-	'immobility' : 'Orörlighet',
-	'insomnia' : 'Sömnbesvär',
-	'fever' : 'Feber',
-	'noSymptoms' : 'Inget',
+	'pain' : 'Ja',
+	'nausea' : 'Nej'
 });
 
 var roles = Object.freeze({
@@ -30,5 +26,5 @@ var roles = Object.freeze({
 
 
 exports.roles = roles;
-exports.yesOrNo = yesOrNo;
+exports.worstAsset = worstAsset;
 exports.worstThing = worstThing;

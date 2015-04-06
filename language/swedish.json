@@ -14,17 +14,11 @@
 	},
 	
 	"form": {
-		"pleaseAnswer": "Har du haft något följande de sista 24 timmarna?",
+		"pleaseAnswer": "Har du haft något av följande de sista 24 timmarna?",
 		"questionPain": "Medelsvår smärta",
 			"noPain": "Inte alls",
 			"worstPain": "Hela tiden",
-		"questionPainkillers": "Har du tagit smärtstillande senaste timmarna?",
-			"yes": "Ja",
-			"no": "Nej",
-	  "questionPainkillers2": "Svår smärta något??",
-			  "noPain": "Inte alls",
-			  "worstPain": "Hela tiden",
-		"questionNausea": "Svår Smärta",
+		"questionNausea": "Svår Smärta?",
 			"noNausea": "Inte alls",
 			"severeNausea": "Hela tiden",
 		"questionNarcosis": "Illamående eller kräkning?",
@@ -37,18 +31,19 @@
 		"questionSatisfied": "Är det svårt att svara på dessa frågor?",
 			"dissatisfied": "Enkelt",
 			"satisfied": "Mycket svårt",
-		"questionWorst": "Markera det besvär som är värst?",
+	  "questionRecovery": "Har återhämtningen gått bättre eller sämre än förväntat?",
+	  	"easy": "lätt",
+	 	 "hard": "Mycket Jobbigt",
+
+		"questionWorst": "Haft sårinfektion?",
 		"worst": {
-			"pain": "Smärta",
-			"nausea": "Illamående",
-			"immobility": "Orörlighet",
-			"insomnia": "Sömnbesvär",
-			"fever": "Feber",
-		  "noSymptoms": "Inget besvär"
+			"pain": "Ja",
+			"nausea": "Nej"
 		},
-		"questionAssess": "Bedöm appens användarvänlighet",
-			"hardToUse": "Mycket svåranvänd",
-			"easyToUse": "Lätt att använda",
+		"questionAsset": "Har du behövt kontakta sjukvården pga oväntade besvär?",
+	 	 "use": {
+	  		"hardToUse": "Ja",
+			"easyToUse": "Nej"},
 		"comments": "Någon annan komplikation?",
 		"submit": "Skicka"
 	},
@@ -135,15 +130,15 @@
 	"formrecord" : {
 		"formdata": "Formulärdata",
 		"date": "Datum",
-		"pain": "Smärta",
-		"assess": "Utvärdering",
-		"worstThing": "Värsta problem",
-		"satisfied": "Återhämtning",
-		"routine": "Vardagsrutin",
-		"dailyActivities": "Vardagsaktivitet",
-		"narcosis": "Påverkan av narkos",
-		"nausea": "Illamående",
-		"painKillers": "Smärtstillande",
-		"comments": "Anteckningar"
+		"pain": "medel smärta",
+		"nausea": "Svår smärta",
+		"worstThing": "Sårinfektion",
+		"satisfied": "Svarande på frågor",
+	  "recovery": "Återhämtning",
+		"routine": "Koncentration/minne",
+		"dailyActivities": "Oro/ångest",
+		"narcosis": "Illamående/kräkningar",
+		"worstAsset": "Oväntade besvär",
+		"comments": "Andra komplikationer"
 	}
  }

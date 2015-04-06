@@ -71,7 +71,7 @@ module.exports = function(grunt) {
   grunt.config.requires('watch.js.files');
   files = grunt.config('watch.js.files');
   files = grunt.file.expand(files);
-
+/*
   grunt.registerTask('delayed-livereload', 'Live reload after the node server has restarted.', function() {
     var done = this.async();
     setTimeout(function() {
@@ -86,7 +86,7 @@ module.exports = function(grunt) {
       });
     }, 750);
   });
-
+*/
 
   grunt.registerTask('default', ['develop', 'watch']);
 };

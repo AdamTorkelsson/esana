@@ -15,7 +15,7 @@ angular.module('myApp')
 
     $scope.state = $state;
     $scope.language;
-    console.log($scope.state.current.name)
+   // console.log($scope.state.current.name)
 
       //make it possible for index to send with the patient_id
       $scope.viewPatient = function(patient_id) {
