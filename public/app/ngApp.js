@@ -15,10 +15,17 @@ angular.module('myApp', [
   // Reroute to login if not yet logged in.
   .run(function ($rootScope, $state, Auth) {
     $rootScope.$on("$stateChangeStart", function (event, toState, toParams, fromState, fromParams) {
-      if (!Auth.isLoggedIn() && toState.name !== 'login') {
+      if (!Auth.isLoggedIn() && toState.name !== 'createaccount' && toState.name !== 'login'){
         console.log('noauth');
+        console.log('' + toState.name);
+        console.log('noauth1');
         event.preventDefault();
         $state.go('login');
+      }
+      else if (!Auth.isLoggedIn() && toState.name === 'createaccount') {
+        console.log('noauth2');
+        event.preventDefault();
+        $state.go('createaccount');
       } 
     });
   });

@@ -10,7 +10,8 @@ var formrecord_api = require('../app/controllers/api.formrecord');
 var surgery_api = require('../app/controllers/api.surgery'); 
 
 module.exports = function(app, passport) {
-
+	app.route('/api/patients')
+		.post(patient_api.create);
 	// Authorize user to a route. Check auth.js for logic.
 	app.use(function(req, res, next) {
 		if (auth.check(req)) {
@@ -21,7 +22,7 @@ module.exports = function(app, passport) {
 	});
 
 	app.use('/api', function(req, res, next) {
-		logger.log(req); // Print the request to the audit log
+		logger.log(req); // Print the request to the audit log, changed
 
 		if (auth.checkAPI(req)) {
 			next();
@@ -62,10 +63,11 @@ module.exports = function(app, passport) {
 	app.route('/form').get(home.form);
 	app.route('/mypatients').get(mypatients.list);
 
+
 	/******* API CALLS **********/
 	app.route('/api/patients')
- 		.get(patient_api.list)
- 		.post(patient_api.create)
+ 		.get(patient_api.list);
+
 
 	app.route('/api/patients/:id')
 		.get(patient_api.view)
@@ -92,6 +94,20 @@ module.exports = function(app, passport) {
 		failureFlash : true
 	// allow flash messages
 	}));
+
+	/* GET Registration Page */
+	app.get('angular/createaccount', function(req, res){
+		res.sendfile('angular/app/createaccount/createaccount.html');
+	});
+
+	app.post('/createaccount', passport.authenticate('local-login', {
+		successRedirect : '/createaccount', // redirect to the secure profile section
+		failureRedirect : '/', // redirect back to the signup page if
+		// there is an error
+		failureFlash : true
+		// allow flash messages
+	}));
+
 
 	// process the login form
 	app.post('/login', passport.authenticate('local-login', {

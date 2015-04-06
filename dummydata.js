@@ -18,7 +18,7 @@ var User = mongoose.model('User');
 
 var drUser = new User();
 
-User.findOne({'local.email': 'dr@esana.se'}, function(err, user) {
+User.findOne({'local.email': 'admin@esana.se'}, function(err, user) {
   if (err) {
     console.log(err)
     process.exit(1);
@@ -28,11 +28,11 @@ User.findOne({'local.email': 'dr@esana.se'}, function(err, user) {
     process.exit();
   }
   else {
-    drUser.local.email = 'dr@esana.se';
+    drUser.local.email = 'admin@esana.se';
     drUser.local.password = drUser.generateHash('password123');
     drUser.role = 1;
-    drUser.firstname = 'Doktor';
-    drUser.lastname = 'Doktorsson';
+    drUser.firstname = 'Admin';
+    drUser.lastname = 'Adminsson';
 
     drUser.save(function(err) {
       if (err) {

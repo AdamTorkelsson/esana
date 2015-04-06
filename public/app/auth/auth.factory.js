@@ -59,6 +59,6 @@ angular.module('myApp')
       login: login,
       logout: logout,
       isLoggedIn: isLoggedIn,
-      getUserData: getUserData,
+      getUserData: getUserData
     };
   }]);

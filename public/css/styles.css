@@ -309,6 +309,9 @@ th .fa-sort-desc,th .fa-sort-asc{
     color: white;
 }
 
+.headertext-black{
+    color: black;
+}
 .titletext {
     margin-left: 25%;
 }

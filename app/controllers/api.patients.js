@@ -47,10 +47,14 @@ module.exports.create = function(req, res, next) {
             newUser.lastname = req.body.lastname;
             newUser.notes = req.body.notes;
             newUser.personal_number = req.body.personal_number;
-            if (req.user.role == 1)
+            if(req.user !== undefined) {
+              if (req.user.role == 1)
                 newUser.role = roles.patient;
-            if (req.user.role == 2)
+              if (req.user.role == 2)
                 newUser.role = req.body.role;
+            }
+            else{
+              newUser.role = roles.patient;}
 
             // save the user
             newUser.save(function(err) {
