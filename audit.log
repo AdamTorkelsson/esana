@@ -442,3 +442,4 @@
 {"method":"GET","url":"/patients/5523095e51853e600c93f7df","user":{"id":{"_bsontype":"ObjectID","id":"U#\t^Q>`\f÷ß"},"lastname":"Torkelsson","firstname":"Adam"},"level":"info","message":"","timestamp":"2015-04-06T22:32:33.051Z"}
 {"method":"GET","url":"/patients/5523095e51853e600c93f7df","user":{"id":{"_bsontype":"ObjectID","id":"U#\t^Q>`\f÷ß"},"lastname":"Torkelsson","firstname":"Adam"},"level":"info","message":"","timestamp":"2015-04-06T22:35:30.330Z"}
 {"method":"GET","url":"/patients","user":{"id":{"_bsontype":"ObjectID","id":"U#\bêïÀ>D)5Vl"},"lastname":"Adminsson","firstname":"Admin"},"level":"info","message":"","timestamp":"2015-04-06T22:36:10.577Z"}
+{"method":"GET","url":"/patients","user":{"id":{"_bsontype":"ObjectID","id":"U#\bêïÀ>D)5Vl"},"lastname":"Adminsson","firstname":"Admin"},"level":"info","message":"","timestamp":"2015-04-06T23:01:03.573Z"}
