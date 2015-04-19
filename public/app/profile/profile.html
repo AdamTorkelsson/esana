@@ -1,0 +1,46 @@
+
+<form name="profileform" width="80%">
+  <table width="100%">
+    <td valign="top"> 
+      <div class="form-group">
+        <label>{{language.myprofile.email}}</label>
+        <input type="email" name="email" ng-model="new_user.local.email" required="required" class="form-control"/>
+      </div>
+      <div class="form-group">          
+        <label>{{language.myprofile.firstname}}</label>
+        <input type="text" name="firstname" ng-model="new_user.firstname" required="required" class="form-control"/>
+      </div>
+      <div class="form-group">  
+        <label>{{language.myprofile.lastname}}</label>
+        <input type="text" name="lastname" ng-model="new_user.lastname" required="required" class="form-control"/>
+      </div>
+      <div class="form-group">          
+        <label>{{language.myprofile.mobile}}</label>
+        <input type="text" name="mobile" ng-model="new_user.mobile" class="form-control"/>
+      </div>
+    </td>
+    <td width="5%">     </td>
+    <td>
+      <div class="form-group">         
+        <label>{{language.myprofile.address1}}</label>
+        <input type="text" name="address1" ng-model="new_user.address1" class="form-control"/>
+      </div>
+      <div class="form-group"> 
+        <label>{{language.myprofile.address2}}</label>
+        <input type="text" name="address2" ng-model="new_user.address2" class="form-control"/>
+      </div>
+      <div class="form-group">          
+        <label>{{language.myprofile.postalnumber}}</label>
+        <input type="text" name="postalno" ng-model="new_user.postalno" class="form-control"/>
+      </div>
+      <div class="form-group">          
+        <label>{{language.myprofile.city}}</label>
+        <input type="text" name="city" ng-model="new_user.city" class="form-control"/>
+      </div>
+      <button style="float: right;  margin-left:2%" ng-click="submit(profileform)" class="buttonsubmit">
+         
+        {{language.myprofile.save}}
+      </button>
+    </td>
+  </table>
+</form>

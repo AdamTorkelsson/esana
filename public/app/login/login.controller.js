@@ -43,13 +43,15 @@ angular.module('myApp')
     // Call auth factory with credentials. 
     $scope.user_id;
     $scope.submit = function(login) {
-
+        console.log("adamduärhär");
       if (!login.$valid) return;
       Auth.login($scope.user).then(
         function(user) {
 
-          $state.go('index');
-        }, 
+
+            window.location.replace("/");
+
+        },
         function(error) {
           $scope.message = 'Felaktiga inloggningsuppgifter.'
           $scope.user = {};

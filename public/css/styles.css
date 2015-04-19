@@ -1,3 +1,7 @@
+
+
+
+
 .patient{
     border-radius: 10px;
     margin: 1em;
@@ -285,8 +289,14 @@ th .fa-sort-desc,th .fa-sort-asc{
 }
 
 .login-page {
-    background-color: #FD7575 ;
+
+    background: url(../img/bannerpic.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
+
 
 .login-page #wrapper {
     padding-left: 0;

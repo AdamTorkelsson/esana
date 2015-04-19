@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html ng-app="myApp" lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <title>eSana</title>
+  <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300">
+  <base href="/">
+
+</head>
+<script src="/lib/jquery/dist/jquery.min.js"></script>
+<script src="/lib/bootstrap/dist/js/bootstrap.min.js"> </script>
+
+<script src="/lib/angular/angular.js"></script>
+<script src="/lib/ui-router/release/angular-ui-router.js"></script>
+<script src="/lib/angular-sanitize/angular-sanitize.js"></script>
+<script src="/lib/angular-animate/angular-animate.js"></script>
+<script src="/lib/angular-cookies/angular-cookies.js"></script>
+<script src="/app/ngApp.js"></script>
+<script src="/app/auth/auth.factory.js"></script>
+<script src="/app/login/login.js"></script>
+<script src="/app/login/login.controller.js"></script>
+<script src="/app/main/main.controller.js"> </script>
+<script src="/app/home/home.js"></script>
+<script src="/app/home/home.controller.js"></script>
+<script src="/app/patients/patients.js"></script>
+<script src="/app/patients/patients.controller.js"></script>
+
+<script src="/app/patientform/patientform.js"></script>
+<script src="/app/patientform/patientform.controller.js"></script>
+<script src="/app/profile/profile.js"></script>
+<script src="/app/profile/profile.controller.js"></script>
+<script src="/app/signup/signup.js"></script>
+<script src="/app/signup/signup.controller.js"></script>
+<script src="/app/password/password.js"></script>
+<script src="/app/password/password.controller.js"></script>
+<script src="/app/addoperation/addoperation.js"></script>
+<script src="/app/addoperation/addoperation.controller.js"></script>
+<script src="/app/formrecord/formrecord.controller.js"></script>
+<script src="/app/formrecord/formrecord.js"></script>
+<script src="/app/patient/patient.controller.js"></script>
+<script src="/app/patient/patient.js"></script>
+<script src="/app/utveckling/utveckling.controller.js"></script>
+<script src="/app/utveckling/utveckling.js"></script>
+
+<body ng-controller="MainCtrl as main"  ng-class="{'login-page': state.current.name==='login'}">
+<section ng-controller="LoginCtrl as main" >
+  <div id="log">
+    <div class="col-sm-6 col-sm-offset-3">
+      <div class="login-form">
+        <h3 class="text-center"><img ng-src="/img/Logo_White.png" width="100"/></h3>
+        <div ng-if="message" ng-bind="message" class="alert alert-danger"></div>
+        <form name="login" class="text-center">
+          <div class="form-group">
+            <label class="headertext">{{language.loginPage.username}}</label>
+            <input type="email" ng-model="user.email" required="required" style="width:40%" class="form-control"/>
+          </div>
+          <div class="form-group">
+            <label class="headertext">{{language.loginPage.password}}</label>
+            <input type="password" ng-model="user.password" required="required" style="width:40%" class="form-control"/>
+          </div>
+          <button ng-click="submit(login)" style="margin-left:auto; margin-right:auto" class="buttonsubmit">{{language.loginPage.login}}</button>
+          <br>
+          <label class="headertext"> {{language.loginPage.or}} </label>
+          <label class="headertext"> <a class="signuplink" data-toggle="modal" data-target="#myModal" >{{language.loginPage.signup}}</a></label>
+
+        </form>
+      </div>
+      <!-- Modal -->
+      <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" id="myModalLabel">{{language.signup.skapakonto}}</h4>
+            </div>
+            <div class="modal-body">
+              <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+
+                  <form width="90%" name="signupform">
+                    <tr>
+                      <td>
+                        <div class="form-group">
+                          <label>{{language.signup.personal_number}}</label>
+                          <input type="text" name="personal_number" placeholder="ÅÅÅÅMMDD-XXXX" ng-model="new_user.personal_number" required="required" class="form-control"/>
+                        </div>
+                        <div class="form-group">
+                          <label>{{language.signup.firstname}}</label>
+                          <input type="text" name="firstname" placeholder="Förnamn" ng-model="new_user.firstname" required="required" class="form-control"/>
+                        </div>
+                        <div class="form-group">
+                          <label>{{language.signup.lastname}}</label>
+                          <input type="text" name="lastname" placeholder="Efternam" ng-model="new_user.lastname" required="required" class="form-control"/>
+                        </div>
+                        <div class="form-group">
+                          <label>{{language.signup.email}}</label>
+                          <input type="email" name="email" placeholder="exempel@mail.se" ng-model="new_user.email" required="required" class="form-control"/>
+                        </div>
+                        <div class="form-group">
+                          <label>{{language.signup.password}}</label>
+                          <input type="password" name="password" placeholder="Minst 6 tecken, varav minst en bokstav och en siffra" ng-model="new_user.password" required="required" class="form-control"/>
+                        </div>
+                        <button ng-click="submitcreate(signupform)" data-dismiss="modal" class="buttonsubmit">{{language.signup.skapakonto}}</button>
+                      </td>
+                    </tr>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <!-- <div class="modal-footer">
+               <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+               <button type="button" class="btn btn-primary">Save changes</button>
+             </div>-->
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal -->
+
+    </div>
+  </div>
+</section>
+</body>
+<!--
+  <div id="page-content-wrapper">
+    <div class="container-fluid">
+      <div class="row">
+        <div ui-view class="col-md-12"></div>
+      </div>
+    </div>
+  </div>
+
+-->
+</div>
+
+
+
+
+<footer></footer>
+
+
+
+</body>
+</html>
+

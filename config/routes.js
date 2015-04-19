@@ -35,8 +35,14 @@ module.exports = function(app, passport) {
 		res.sendfile('language/swedish.json')
 	});
 
-	app.route('/angular').get(function (req, res) {
-		res.sendfile('angular/app/ng-index.html');
+	app.route('').get(function (req, res) {
+		if(req.user !== undefined){
+			res.sendfile('public/app/ng-index.html');
+		}
+		else{
+			res.sendfile('public/app/login/login.html');
+		}
+
 	})
 
 	// used to pass user data to angular app

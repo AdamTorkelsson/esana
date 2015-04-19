@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html ng-app="myApp" lang="sv">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>eSana</title>
+    <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300">
+    <base href="/">
+  </head>
+  <body ng-controller="MainCtrl as main" ng-class="{'login-page': state.current.name==='login'}">
+    <div id="wrapper">
+      <div id="sidebar-wrapper">
+        <h1 class="text-center"><img ng-src="/img/Logo_White.png" width="100" ui-sref="index" style="cursor:pointer"></h1>
+        <div ng-if="user.firstname">
+
+          <div ng-if="user.role == 0">
+            <a ui-sref="utveckling" ng-click="viewPatient(patient._id)" ui-sref-active="textcolorbutton" class="button">
+              <span ng-bind="language.index.utveckling" class="buttontext"></span></a>
+
+            <a ui-sref="patientform" ui-sref-active="textcolorbutton" class="button">
+            <span ng-bind="language.index.form" class="buttontext"></span></a>
+            <a ui-sref="profile" ui-sref-active="textcolorbutton" class="button">
+              <span ng-bind="language.index.myprofile" class="buttontext"></span>
+            </a><a ui-sref="password" ui-sref-active="textcolorbutton" class="button">
+            <span ng-bind="language.index.password" class="buttontext"></span></a>
+            <a href="/logout" ng-click="logout()" ui-sref-active="textcolorbutton" class="buttonsign">
+              <span ng-bind="language.index.logout" class="buttontext"></span></a></div>
+
+
+          <div ng-if="user.role == 1">
+        <!--    <a ui-sref="utveckling" ng-click="viewPatient(patient._id)" ui-sref-active="textcolorbutton" class="button">
+              <span ng-bind="language.index.utveckling" class="buttontext"></span></a>-->
+
+
+            <a ui-sref="patients" ng-class="{'textcolorbutton': state.current.name==='patients' || state.current.name==='addoperation' || state.current.name==='patient' || state.current.name==='patientform'}" class="button">
+              <span ng-bind="language.index.mypatients" class="buttontext"></span></a>
+
+            <a ui-sref="signup" ui-sref-active="textcolorbutton" class="button">
+              <span ng-bind="language.index.register" class="buttontext"></span></a>
+
+            <a ui-sref="password" ui-sref-active="textcolorbutton" class="button">
+              <span ng-bind="language.index.password" class="buttontext"></span></a>
+
+            <a href="logout" ng-click="logout()" ui-sref-active="textcolorbutton" class="buttonsign">
+              <span ng-bind="language.index.logout" class="buttontext"></span></a></div>
+
+          <div ng-if="user.role == 2"><a ui-sref="signup" ui-sref-active="textcolorbutton" class="button"><span ng-bind="language.index.register" class="buttontext"></span></a><a ui-sref="patients" ng-class="{'textcolorbutton': state.current.name==='patients' || state.current.name==='addoperation' || state.current.name==='patient' || state.current.name==='patientform'}" class="button"><span ng-bind="language.index.mypatients" class="buttontext"></span></a><a ui-sref="password" ui-sref-active="textcolorbutton" class="button"><span ng-bind="language.index.password" class="buttontext"></span></a><a href="logout" ng-click="logout()" ui-sref-active="textcolorbutton" class="buttonsign"><span ng-bind="language.index.logout" class="buttontext"></span></a></div>
+          <p ng-bind="language.index.loggedInAs+': '+ user.firstname + ' ' + user.lastname + '  - ' +  user.local.email" style="position:absolute;bottom:0;"></p>
+        </div>
+      </div>
+      <div id="page-content-wrapper">
+        <div class="container-fluid">
+          <div class="row">
+            <div ui-view class="col-md-12"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer></footer>
+    <script src="/lib/jquery/dist/jquery.min.js"></script>
+    <script src="/lib/bootstrap/dist/js/bootstrap.min.js"> </script>
+    <script src="/lib/angular/angular.js"></script>
+    <script src="/lib/ui-router/release/angular-ui-router.js"></script>
+    <script src="/lib/angular-sanitize/angular-sanitize.js"></script>
+    <script src="/lib/angular-animate/angular-animate.js"></script>
+    <script src="/lib/angular-cookies/angular-cookies.js"></script>
+    <script src="/app/ngApp.js"></script>
+    <script src="/app/auth/auth.factory.js"></script>
+    <script src="/app/main/main.controller.js"> </script>
+    <script src="/app/home/home.js"></script>
+    <script src="/app/home/home.controller.js"></script>
+    <script src="/app/patients/patients.js"></script>
+    <script src="/app/patients/patients.controller.js"></script>
+    <script src="/app/login/login.js"></script>
+    <script src="/app/login/login.controller.js"></script>
+    <script src="/app/patientform/patientform.js"></script>
+    <script src="/app/patientform/patientform.controller.js"></script>
+    <script src="/app/profile/profile.js"></script>
+    <script src="/app/profile/profile.controller.js"></script>
+    <script src="/app/signup/signup.js"></script>
+    <script src="/app/signup/signup.controller.js"></script>
+    <script src="/app/password/password.js"></script>
+    <script src="/app/password/password.controller.js"></script>
+    <script src="/app/addoperation/addoperation.js"></script>
+    <script src="/app/addoperation/addoperation.controller.js"></script>
+    <script src="/app/formrecord/formrecord.controller.js"></script>
+    <script src="/app/formrecord/formrecord.js"></script>
+    <script src="/app/patient/patient.controller.js"></script>
+    <script src="/app/patient/patient.js"></script>
+    <script src="/app/utveckling/utveckling.controller.js"></script>
+    <script src="/app/utveckling/utveckling.js"></script>
+
+  </body>
+</html>

@@ -16,8 +16,7 @@ angular.module('myApp', [
   .run(function ($rootScope, $state, Auth) {
     $rootScope.$on("$stateChangeStart", function (event, toState, toParams, fromState, fromParams) {
       if (!Auth.isLoggedIn() && toState.name !== 'createaccount' && toState.name !== 'login'){
-        console.log('noauth');
-        console.log('' + toState.name);
+
         console.log('noauth1');
         event.preventDefault();
         $state.go('login');

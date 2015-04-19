@@ -1,0 +1,44 @@
+
+
+<form width="80%" name="signupform">
+  <table width="100%">
+    <tr>
+      <td>
+        <div class="form-group">
+          <label>{{language.signup.personal_number}}</label>
+          <input type="text" name="personal_number" placeholder="ÅÅÅÅMMDD-XXXX" ng-model="new_user.personal_number" required="required" class="form-control"/>
+        </div>
+        <div class="form-group">
+          <label>{{language.signup.firstname}}</label>
+          <input type="text" name="firstname" placeholder="Förnamn" ng-model="new_user.firstname" required="required" class="form-control"/>
+        </div>
+        <div class="form-group">
+          <label>{{language.signup.lastname}}</label>
+          <input type="text" name="lastname" placeholder="Efternam" ng-model="new_user.lastname" required="required" class="form-control"/>
+        </div>
+        <div ng-if="user.role==2" class="form-default">
+          <div class="form-group">
+            <label>{{language.signup.occupation}}</label>
+            <input type="integer" name="role" placeholder="ÅÅÅÅMMDD-XXXX" ng-model="new_user.role" class="form-control"/>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>{{language.signup.email}}</label>
+          <input type="email" name="email" placeholder="exempel@mail.se" ng-model="new_user.email" required="required" class="form-control"/>
+        </div>
+        <div class="form-group">
+          <label>{{language.signup.password}}</label>
+          <input type="password" name="password" placeholder="Minst 6 tecken, varav minst en bokstav och en siffra" ng-model="new_user.password" required="required" class="form-control"/>
+        </div>
+        <button ng-click="submit(signupform)" class="buttonsubmit">{{language.signup.skapakonto}}</button>
+      </td>
+      <td width="5%">          </td>
+      <td valign="top">   
+        <div class="form-group">
+          <label>{{language.signup.notes}}</label>
+          <textarea cols="40" rows="16" placeholder="Eventuella smärtor under operationsdagen med mera" name="notes" ng-model="new_user.notes" class="form-control"></textarea>
+        </div>
+      </td>
+    </tr>
+  </table>
+</form>

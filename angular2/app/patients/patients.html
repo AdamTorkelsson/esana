@@ -1,0 +1,36 @@
+
+<div class="input-group searchbox">
+  <input type="text" ng-model="search.$"/>
+  <button><i class="glyphicon glyphicon-search"></i></button>
+</div>
+<table id="patientTable" class="table table-hover">
+  <thead>
+    <tr> 
+      <th ng-click="predicate='status'; reverse=!reverse" class="clickable">Status<i ng-class="{'fa-sort-desc': predicate==='status'&amp;&amp;reverse, 'fa-sort-asc': predicate==='status'&amp;&amp;!reverse}" class="fa"></i></th>
+      <th ng-click="predicate='personal_number'; reverse=!reverse" class="clickable">{{language.patientListing.personalnumber}}<i ng-class="{'fa-sort-desc': predicate==='personal_number'&amp;&amp;reverse, 'fa-sort-asc': predicate==='personal_number'&amp;&amp;!reverse}" class="fa"> </i></th>
+      <th ng-click="predicate='firstname'; reverse=!reverse" class="clickable">{{language.patientListing.name}}<i ng-class="{'fa-sort-desc': predicate==='firstname'&amp;&amp;reverse, 'fa-sort-asc': predicate==='firstname'&amp;&amp;!reverse}" class="fa"> </i></th>
+      <th ng-click="predicate='formrecords.length'; reverse=!reverse" class="clickable">{{language.patientListing.completedforms}}<i ng-class="{'fa-sort-desc': predicate==='formrecords.length'&amp;&amp;reverse, 'fa-sort-asc': predicate==='formrecords.length'&amp;&amp;!reverse}" class="fa"> </i></th>
+      <th ng-click="predicate='formrecords[0].date'; reverse=!reverse" class="clickable">{{language.patientListing.latestform}}<i ng-class="{'fa-sort-desc': predicate==='formrecords[0].date'&amp;&amp;reverse, 'fa-sort-asc': predicate==='formrecords[0].date'&amp;&amp;!reverse}" class="fa"> </i></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="patient in patientRecords | orderBy:predicate:reverse | filter:search" popover="popover">
+      <td>
+        <p style="background-color: {{getStatusColor(patient._id)}}" data-toggle="tooltip" data-placement="top" title="{{getStatusText(patient._id)}}" class="statusBox"> </p>
+      </td>
+      <td> <a ng-click="viewPatient(patient._id)" style="cursor: pointer" class="patientlisttext">{{patient.personal_number}}</a></td>
+      <td> <a ng-click="viewPatient(patient._id)" style="cursor: pointer" class="patientlisttext">{{patient.firstname + " " + patient.lastname}} </a></td>
+      <td> 
+        <button type="button" data-trigger="focus" data-toggle="popover" data-placement="right" title="Ifyllda formulär" data-content="{{patient.displayRecords}}" class="btn btn-info">{{patient.formrecords.length}}</button>
+      </td>
+      <td> <a ng-click="formrecord(patient.formrecords[0]._id, patient._id)" style="cursor: pointer" class="patientlisttext">{{patient.formrecords[patient.formrecords.length-1].date | date : 'yyyy-MM-dd HH:mm'}}</a></td>
+      <td>
+        <button type="button" ng-click="addOperation(patient._id)" class="btn btn-info">+ Operation</button>
+      </td>
+      <td>
+        <button type="button" ui-sref="patientform({ patient_id: patient._id })" class="btn btn-info">+ Formulär</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
